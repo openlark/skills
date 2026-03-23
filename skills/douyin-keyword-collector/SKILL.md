@@ -1,142 +1,142 @@
 ---
 name: douyin-keyword-collector
-description: 抖音搜索关键词收集工具。通过浏览器自动化访问抖音首页，在搜索栏输入关键词并收集自动提示框中的相关关键词建议。使用场景：用户需要收集抖音热门搜索词、关键词联想、SEO 关键词研究、内容创作灵感。触发词："抖音关键词"、"收集抖音关键词"、"抖音搜索建议"、"douyin keywords"。
+description: Accessing the Douyin homepage through browser automation, entering keywords in the search bar and collecting relevant keyword suggestions in the automated prompt box.
 ---
 
-# 抖音关键词收集工具
+# Douyin Keyword Collector
 
-## 功能概述
+## Feature Overview
 
-本技能通过浏览器自动化访问抖音首页，在搜索栏输入关键词并收集自动提示框中的相关关键词建议。无需 API 密钥，完全基于浏览器自动化实现。
+This skill automatically accesses the Douyin homepage through the browser, enters keywords in the search bar and collects relevant keyword suggestions in the automatic prompt box. No API key required, completely browser-based automation.
 
-## 使用场景
+## Triggers
 
-- 抖音 SEO 关键词研究
-- 内容创作灵感收集
-- 热门话题趋势分析
-- 竞品关键词调研
-- 短视频选题策划
+This skill is triggered when the user mentions any of the following keywords:
+- 抖音关键词
+- 收集抖音关键词
+- 抖音搜索建议
+- 抖音热门词
+- 抖音 SEO
+- 抖音话题
+- Douyin keywords
+- Collect Douyin keywords
+- Douyin search suggestions
+- Douyin hot words
+- Douyin SEO
+- Douyin topics
 
-## 操作流程
+## Usage Scenarios
 
-### 1. 启动浏览器
+- Douyin SEO Keyword Research
+- Content creation inspiration collection
+- Trending topic trend analysis
+- Competitive keyword research
+- Short video topic selection planning
 
-使用 `browser` 工具的 `start` 或 `snapshot` 动作启动浏览器。
+## Operation process
 
-### 2. 访问抖音首页
+### 1. Launch the browser
 
-导航到抖音官网：
+Use the `browser` tool's `start` or `snapshot` action to launch the browser.
+
+### 2. Visit the Douyin homepage
+
+Navigate to the official website of Douyin:
 ```
 https://www.douyin.com
 ```
 
-### 3. 检查并关闭登录弹窗
+### 3. Check and close the login pop-up
 
-使用 `browser` 工具的 `snapshot` 动作获取页面元素引用，检查是否存在登录弹窗。
+Use the `snapshot` action of the `browser` tool to get a page element reference and check for a login pop-up.
 
-如果存在登录弹窗（查找关闭按钮，通常为 `img` 或 `button` 元素），使用 `act` 动作点击关闭：
+If there is a login pop-up (look for a close button, usually an `img` or `button` element), use the `act` action to click close:
 ```
-browser action=act request={"kind":"click","ref":"<关闭按钮引用>"}
+browser action=act request={"kind":"click","ref"<关闭按钮引用>:""}
 ```
 
-### 4. 定位搜索栏
+### 4. Locate the search bar
 
-使用 `browser` 工具的 `snapshot` 动作获取页面元素引用，找到搜索栏输入框（textbox 类型，描述包含"搜索"）。
+Use the `snapshot` action of the `browser` tool to get a page element reference and find the search bar input box (textbox type, description contains 'search').
 
-### 5. 输入关键词
+### 5. Enter a keyword
 
-使用 `browser` 工具的 `act` 动作，选择 `type` 类型，在搜索栏输入目标关键词：
+Using the `act` action of the `browser` tool, select the `type` type and enter your target keyword in the search bar:
 ```
 browser action=act request={"kind":"type","ref":"<搜索栏引用>","text":"<关键词>"}
 ```
 
-### 6. 等待提示框出现
+### 6. Wait for the prompt box to appear
 
-等待 1-2 秒让自动提示框加载：
+Wait 1-2 seconds for the auto prompt box to load:
 ```
 browser action=act request={"kind":"wait","timeMs":2000}
 ```
 
-### 7. 收集自动提示
+### 7. Collect automated prompts
 
-使用 `snapshot` 动作获取提示框中的关键词列表，查找 `list` 或 `generic` 元素中包含的关键词文本。
+Use the `snapshot` action to get a list of keywords in the prompt box, looking for the keyword text contained in the `list` or `generic` element.
 
-### 8. 整理输出
+### 8. Organize the output
 
-将收集到的关键词整理成列表格式输出给用户。
+Organize the collected keywords into a list format and output them to users.
 
-## 浏览器自动化命令示例
+## Example of Browser Automation Commands
 
-### 启动浏览器并访问抖音
+### Launch your browser and access Douyin
 
 ```
 browser action=start profile=openclaw
 browser action=navigate targetUrl=https://www.douyin.com
 ```
 
-### 获取页面快照（获取元素引用）
+### Get a snapshot of the page (get an element reference)
 
 ```
 browser action=snapshot refs=aria
 ```
 
-### 关闭登录弹窗（如存在）
+### Close the login pop-up (if present)
 
-查找弹窗中的关闭按钮（通常是 `img` 或 `button` 元素，靠近弹窗右上角），然后点击：
+Look for the close button in the pop-up window (usually the `img` or `button` element, near the top-right corner of the pop-up), and click:
 ```
-browser action=act request={"kind":"click","ref":"<关闭按钮引用>"}
+browser action=act request={"kind":"click","ref"<关闭按钮引用>:""}
 ```
 
-### 在搜索栏输入关键词
+### Enter keywords in the search bar
 
 ```
 browser action=act request={"kind":"type","ref":"<搜索栏引用>","text":"<关键词>"}
 ```
 
-### 等待提示框加载
+### Wait for the prompt box to load
 
 ```
 browser action=act request={"kind":"wait","timeMs":2000}
 ```
 
-### 获取提示框内容
+### Get the content of the prompt box
 
 ```
 browser action=snapshot refs=aria
 ```
 
-## 注意事项
+## Considerations
 
-1. **登录弹窗处理**：访问抖音首页后可能会弹出登录框，需先点击关闭按钮（通常是弹窗右上角的 X 图标）再继续操作。
+1. **Login pop-up processing**: After accessing the Douyin homepage, a login box may pop up, and you need to click the close button (usually the X icon in the upper right corner of the pop-up window) before proceeding.
+2. **Login Status**: Some search functions may require login. If you still cannot get the prompt after closing the pop-up window, it is recommended that you manually scan the QR code to log in.
+3. **Anti-crawler mechanism**: Douyin may have an anti-crawler mechanism, and you need to add appropriate delays when operating to avoid triggering risk control.
+4. **Element References**: Use `refs=aria` to obtain stable element references to ensure operational accuracy.
+5. **Waiting Time**: After entering the keyword, wait 1-2 seconds for the automatic prompt box to load.
+6. **Mobile adaptation**: Douyin may have different interfaces between mobile and desktop, and it is recommended to use the desktop mode.
 
-2. **登录状态**：部分搜索功能可能需要登录。如关闭弹窗后仍无法获取提示，建议用户手动扫码登录。
-
-3. **反爬虫机制**：抖音可能有反爬虫机制，操作时需适当添加延迟，避免触发风控。
-
-4. **元素引用**：使用 `refs=aria` 获取稳定的元素引用，确保操作准确性。
-
-5. **等待时间**：输入关键词后需等待 1-2 秒让自动提示框加载完成。
-
-6. **移动端适配**：抖音可能有移动端和桌面端不同界面，建议使用桌面端模式。
-
-## 输出格式
+## Output Format
 
 ```
-关键词：[输入的关键词]
-搜索建议词：
-1. 建议词1
-2. 建议词2
-3. 建议词3
+Keywords: [Entered keywords]
+Search suggestions:
+1. Suggestion 1
+2. Suggestion 2
+3. Suggestion 3
 ...
 ```
-
-## 触发条件
-
-当用户提到以下任一关键词时触发本技能：
-- 抖音关键词
-- 收集抖音关键词
-- 抖音搜索建议
-- douyin keywords
-- 抖音热门词
-- 抖音 SEO
-- 抖音话题

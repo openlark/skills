@@ -1,10 +1,10 @@
-# 浏览器自动化最佳实践
+# Browser Automation Best Practices
 
-## 等待策略
+## Waiting Strategies
 
-### 固定等待
+### Fixed Wait
 
-适用于已知延迟的操作：
+Suitable for operations with known delays:
 
 ```
 action: act
@@ -12,55 +12,55 @@ kind: wait
 timeMs: 2000
 ```
 
-### 条件等待
+### Conditional Wait
 
-等待特定元素出现或消失：
+Wait for a specific element to appear or disappear:
 
 ```
 action: act
 kind: wait
-textGone: 加载中...
+textGone: Loading...
 ```
 
-## 元素定位
+## Element Location
 
-### 使用 ARIA 引用
+### Using ARIA References
 
 ```
 action: snapshot
 refs: aria
 ```
 
-优点：
-- 更稳定的元素标识
-- 不受页面结构变化影响
-- 支持无障碍访问元素
+Advantages:
+- More stable element identification
+- Not affected by page structure changes
+- Supports accessibility for elements
 
-### 使用角色引用（默认）
+### Using Role References (Default)
 
 ```
 action: snapshot
 refs: role
 ```
 
-适用于标准 HTML 元素。
+Suitable for standard HTML elements.
 
-## 输入优化
+## Input Optimization
 
-### 慢速输入
+### Slow Typing
 
-触发自动完成和动态加载：
+Triggers autocomplete and dynamic loading:
 
 ```
 action: act
 kind: type
-text: 关键词
+text: keyword
 slowly: true
 ```
 
-### 清空输入框
+### Clear Input Field
 
-在重新输入前清空：
+Clear before re-entering:
 
 ```
 action: act
@@ -69,29 +69,29 @@ kind: fill
 fields: []
 ```
 
-## 性能优化
+## Performance Optimization
 
-### 保持会话
+### Maintain Session
 
-多次操作时复用浏览器会话：
+Reuse the browser session for multiple operations:
 
-1. 第一次启动浏览器
-2. 后续操作使用相同的 `targetId`
-3. 最后统一关闭
+1. Launch the browser for the first time
+2. Use the same `targetId` for subsequent operations
+3. Close all at the end
 
-### 延迟请求
+### Delay Requests
 
-避免触发反爬机制：
+Avoid triggering anti-scraping mechanisms:
 
-- 单次操作间隔：2-3 秒
-- 批量操作间隔：5-10 秒
-- 避免高峰时段高频访问
+- Interval for single operations: 2-3 seconds
+- Interval for batch operations: 5-10 seconds
+- Avoid high-frequency access during peak hours
 
-## 错误处理
+## Error Handling
 
-### 超时设置
+### Timeout Settings
 
-长操作增加超时：
+Increase timeout for long operations:
 
 ```
 action: navigate
@@ -99,28 +99,28 @@ targetUrl: https://www.toutiao.com
 timeoutMs: 30000
 ```
 
-### 重试策略
+### Retry Strategy
 
-失败后重试 2-3 次：
+Retry 2-3 times after failure:
 
-1. 等待 3 秒
-2. 刷新页面
-3. 重新执行操作
+1. Wait for 3 seconds
+2. Refresh the page
+3. Re-execute the operation
 
-## 调试技巧
+## Debugging Tips
 
-### 截图辅助
+### Screenshot Assistance
 
-遇到问题时截图：
+Take a screenshot when encountering problems:
 
 ```
 action: screenshot
 fullPage: true
 ```
 
-### 控制台日志
+### Console Logs
 
-检查页面错误：
+Check for page errors:
 
 ```
 action: console

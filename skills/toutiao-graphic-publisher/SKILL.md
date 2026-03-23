@@ -1,165 +1,175 @@
 ---
 name: toutiao-graphic-publisher
-description: 今日头条自动发布文章技能。通过浏览器自动化实现头条号图文内容自动发布，支持智能排版、自动生成热门标签和激活标签。使用场景：(1) 用户说"发布到今日头条"、"发到头条"、"自动发布头条文章"、(2) 用户有文章标题和内容需要发布到今日头条、(3) 用户需要批量发布内容到头条号。无需API密钥，使用浏览器自动化操作完成登录、内容填充、标签生成、发布全流程。仅扫码登录需人工操作，其余步骤全自动化。
+description: Automatically publishes graphic content on Toutiao through browser automation, supporting intelligent formatting, automatic generation of popular tags, and tag activation.
 ---
 
-# 今日头条自动发布文章
+# Toutiao Automatic Article Publishing
 
-通过浏览器自动化实现头条号图文内容的自动发布，支持智能排版、自动生成热门标签和激活标签。
+## Feature Overview
 
-## 工作流程
+Automatically publishes graphic content on Toutiao through browser automation, supporting intelligent formatting, automatic generation of popular tags, and tag activation. No API keys required; uses browser automation to complete the entire process of login, content filling, tag generation, and publishing. Only QR code login requires manual operation; all other steps are fully automated.
 
-### 1. 登录检测
-- 访问 https://mp.toutiao.com/profile_v4/index
-- 检测登录状态
-- 如未登录，提示用户扫码登录（需人工操作）
-- 等待登录完成
+## Trigger Scenarios
+- 用户说"发布到今日头条"、"发到头条"、"自动发布头条文章"
+- 用户有文章标题和内容需要发布到今日头条
+- 用户需要批量发布内容到头条号
+- User says "publish to Toutiao", "post to Toutiao", "automatically publish Toutiao article"
+- User has article title and content to publish on Toutiao
+- User needs to batch publish content to Toutiao account
 
-### 2. 进入发布页面
-- 直接访问 https://mp.toutiao.com/profile_v4/graphic/publish
-- 等待编辑器加载完成
+## Workflow
 
-### 3. 内容智能处理
+### 1. Login Detection
+- Visit https://mp.toutiao.com/profile_v4/index
+- Check login status
+- If not logged in, prompt user to scan QR code to log in (requires manual operation)
+- Wait for login to complete
 
-#### 3.1 标题识别与处理
-- 分析正文内容，识别潜在的章节标题
-- 标题特征：
-  - 以数字开头（如"1."、"一、"、"（1）"）
-  - 以"第X章/节"开头
-  - 短句且位于段落开头（10字以内）
-  - 包含关键词（如"引言"、"结论"、"总结"、"前言"）
+### 2. Enter Publishing Page
+- Directly visit https://mp.toutiao.com/profile_v4/graphic/publish
+- Wait for the editor to fully load
 
-#### 3.2 自动添加小标题样式
-识别到标题后，自动应用头条编辑器的小标题样式：
-- 选中标题文字
-- 点击编辑器「H」按钮或选择「小标题」样式
-- 确保标题突出显示
+### 3. Content Intelligent Processing
 
-#### 3.3 正文排版优化
-- **段落间距**：段落之间添加空行，提升可读性
-- **重点标注**：关键句子使用**加粗**标记
-- **列表优化**：将列举内容转换为有序或无序列表
-- **分段处理**：长段落适当拆分，每段3-5行为宜
+#### 3.1 Title Recognition and Processing
+- Analyze the body content to identify potential section headings
+- Heading characteristics:
+  - Starts with numbers (e.g., "1.", "一、", "(1)")
+  - Starts with "Chapter X/Section X"
+  - Short sentence at the beginning of a paragraph (within 10 characters)
+  - Contains keywords (e.g., "Introduction", "Conclusion", "Summary", "Foreword")
 
-### 4. 自动生成热门标签
+#### 3.2 Automatically Apply Subheading Styles
+Once headings are identified, automatically apply Toutiao editor's subheading styles:
+- Select the heading text
+- Click the editor's "H" button or select the "Subheading" style
+- Ensure headings are prominently displayed
 
-#### 4.1 标签分析维度
-根据文章内容自动生成3-5个热门标签：
+#### 3.3 Body Text Formatting Optimization
+- **Paragraph Spacing**: Add blank lines between paragraphs to improve readability
+- **Key Point Emphasis**: Use **bold** to highlight key sentences
+- **List Optimization**: Convert enumerated content into ordered or unordered lists
+- **Paragraph Splitting**: Appropriately split long paragraphs, ideally 3-5 sentences per paragraph
 
-| 分析维度 | 说明 | 示例 |
+### 4. Automatically Generate Popular Tags
+
+#### 4.1 Tag Analysis Dimensions
+Automatically generate 3-5 popular tags based on article content:
+
+| Analysis Dimension | Description | Example |
 |---------|------|------|
-| 核心主题 | 文章主要讨论的技术/领域 | OpenClaw、AI Agent |
-| 行业热点 | 当前热门话题 | 人工智能、大模型 |
-| 细分领域 | 垂直应用场景 | 企业智能化、个人效率 |
-| 趋势预测 | 面向未来的讨论 | 发展趋势、未来展望 |
-| 实用价值 | 读者可获得的价值 | 教程、指南、分析 |
+| Core Theme | Main technology/field discussed in the article | OpenClaw, AI Agent |
+| Industry Hotspot | Current trending topics | Artificial Intelligence, Large Language Models |
+| Niche Area | Vertical application scenarios | Enterprise Intelligence, Personal Efficiency |
+| Trend Prediction | Future-oriented discussions | Development Trends, Future Outlook |
+| Practical Value | Value readers can gain | Tutorials, Guides, Analysis |
 
-#### 4.2 标签生成规则
+#### 4.2 Tag Generation Rules
 ```
-标签来源优先级：
-1. 文章标题中的核心词
-2. 每个章节标题的关键词
-3. 高频出现的专业术语
-4. 相关领域热门词汇
-5. 目标读者群体标签
+Tag Source Priority:
+1. Core words from the article title
+2. Keywords from each section heading
+3. Frequently occurring technical terms
+4. Popular terms in related fields
+5. Target audience tags
 ```
 
-#### 4.3 标签选择策略
-- **必选标签**：文章核心主题词（1-2个）
-- **推荐标签**：行业热点词（1-2个）
-- **辅助标签**：细分领域/实用价值词（1个）
+#### 4.3 Tag Selection Strategy
+- **Mandatory Tags**: Core theme words of the article (1-2)
+- **Recommended Tags**: Industry hotspot words (1-2)
+- **Auxiliary Tags**: Niche area/practical value words (1)
 
-**标签数量**：3-5个，不超过5个
+**Number of Tags**: 3-5, no more than 5
 
-### 5. 激活标签
+### 5. Activate Tags
 
-#### 5.1 标签输入方式
-- 找到文章发布页的「标签」输入框
-- 依次输入生成的热门标签
-- 每输入一个标签后按回车确认
-- 等待系统自动匹配/添加
+#### 5.1 Tag Input Method
+- Locate the "Tags" input field on the article publishing page
+- Enter the generated popular tags one by one
+- Press Enter after each tag to confirm
+- Wait for the system to automatically match/add
 
-#### 5.2 标签激活检查
-激活标签的检查项：
-- ✅ 标签数量是否在3-5个范围内
-- ✅ 标签是否与文章内容相关
-- ✅ 热门标签是否有搜索量
-- ✅ 避免重复或相似标签
+#### 5.2 Tag Activation Checklist
+Checklist for tag activation:
+- ✅ Whether the number of tags is within the 3-5 range
+- ✅ Whether tags are relevant to the article content
+- ✅ Whether popular tags have search volume
+- ✅ Avoid duplicate or similar tags
 
-#### 5.3 标签优化建议
-- 优先选择有搜索量的标签
-- 长尾标签可作为补充
-- 避免过于泛化或专业化
-- 参考文章结尾的热门话题
+#### 5.3 Tag Optimization Suggestions
+- Prioritize tags with search volume
+- Use long-tail tags as supplements
+- Avoid tags that are too broad or too specialized
+- Reference popular topics at the end of articles
 
-### 6. 内容填充
-- **标题**：在标题输入框填入用户提供的标题（2-30字）
-- **正文**：填入经过智能排版处理后的内容
-- **标签**：填入自动生成的热门标签并激活
-- **展示封面**：选择无封面
+### 6. Content Filling
+- **Title**: Fill in the user-provided title in the title input field (2-30 characters)
+- **Body Text**: Fill in the content after intelligent formatting processing
+- **Tags**: Fill in and activate the automatically generated popular tags
+- **Display Cover**: Select no cover
 
-### 7. 执行发布
-- 点击「预览并发布」按钮
-- 弹预览框出现「确认发布」按钮
-- 点击「确认发布」按钮
+### 7. Execute Publishing
+- Click the "Preview and Publish" button
+- When the preview pop-up appears, click the "Confirm Publish" button
+- Click the "Confirm Publish" button
 
-## 智能标签系统
+## Intelligent Tag System
 
-### 标签组合策略
+### Tag Combination Strategy
 
-| 文章类型 | 标签组合示例 |
+| Article Type | Tag Combination Example |
 |---------|------------|
-| 技术教程 | 核心工具 + 操作方法 + 实用价值 |
-| 趋势分析 | 行业热点 + 核心主题 + 未来趋势 |
-| 产品测评 | 产品名称 + 核心功能 + 适用场景 |
-| 经验分享 | 核心经验 + 适用人群 + 成果价值 |
+| Technical Tutorial | Core Tool + Operation Method + Practical Value |
+| Trend Analysis | Industry Hotspot + Core Theme + Future Trend |
+| Product Review | Product Name + Core Features + Application Scenarios |
+| Experience Sharing | Core Experience + Target Audience + Outcome Value |
 
-## 智能排版规则
+## Intelligent Formatting Rules
 
-### 标题识别规则
+### Heading Recognition Rules
 ```
-一级标题特征：
-- 格式：一、二、三... 或 1. 2. 3... 或 第一章/第一节
-- 位置：段落开头
-- 长度：通常 2-10 个字
+Primary Heading Characteristics:
+- Format: 一、二、三... or 1. 2. 3... or Chapter 1/Section 1
+- Position: Beginning of paragraph
+- Length: Typically 2-10 characters
 
-二级标题特征：
-- 格式：（一）（二）或 1.1 1.2 或 ① ②
-- 位置：段落开头
-- 长度：通常 2-15 个字
+Secondary Heading Characteristics:
+- Format: (一)(二) or 1.1 1.2 or ① ②
+- Position: Beginning of paragraph
+- Length: Typically 2-15 characters
 
-关键词标题：
-- 引言/前言/绪论
-- 结论/总结/结语
-- 背景/概述/简介
-- 方法/分析/讨论
+Keyword Headings:
+- Introduction/Foreword/Preface
+- Conclusion/Summary/Closing Remarks
+- Background/Overview/Brief Introduction
+- Methods/Analysis/Discussion
 ```
 
-### 排版美化规则
-1. **标题层级**：一级标题用「小标题」样式，二级标题用**加粗**
-2. **段落优化**：每段控制在100-200字，过长则拆分
-3. **重点突出**：核心观点、数据、结论使用**加粗**
-4. **列表转换**：3个以上并列项转换为列表形式
-5. **空行处理**：标题前后、段落之间保持适当空行
+### Formatting Beautification Rules
+1. **Heading Hierarchy**: Use "Subheading" style for primary headings, use **bold** for secondary headings
+2. **Paragraph Optimization**: Keep each paragraph to 100-200 characters, split if too long
+3. **Key Point Emphasis**: Use **bold** for core viewpoints, data, and conclusions
+4. **List Conversion**: Convert 3 or more parallel items into list format
+5. **Blank Line Handling**: Maintain appropriate blank lines before and after headings, and between paragraphs
 
-## 使用方式
+## Usage Instructions
 
-用户需提供：
-- **标题**：文章标题（2-30字）（必填）
-- **正文**：文章内容（必填）
+Users need to provide:
+- **Title**: Article title (2-30 characters) (required)
+- **Body Text**: Article content (required)
 
-## 注意事项
+## Important Notes
 
-1. **登录状态**：首次使用或Cookie过期时需要扫码登录
-2. **内容规范**：遵守今日头条社区规范，避免违规内容
-3. **标签选择**：选择与文章高度相关的标签，避免堆砌无关标签
-4. **频率限制**：避免短时间内大量发布，建议间隔5分钟以上
-5. **排版检查**：发布后建议预览检查排版效果和标签展示
+1. **Login Status**: QR code login is required for first-time use or when cookies expire
+2. **Content Compliance**: Adhere to Toutiao community guidelines; avoid violating content
+3. **Tag Selection**: Choose tags highly relevant to the article; avoid stacking irrelevant tags
+4. **Frequency Limits**: Avoid publishing multiple articles in a short period; it is recommended to wait at least 5 minutes between publications
+5. **Formatting Check**: It is recommended to preview and check the formatting effect and tag display after publishing
 
-## 错误处理
+## Error Handling
 
-- 登录失败：提示用户重新扫码
-- 发布失败：检查网络连接，重试或反馈具体错误信息
-- 内容违规：提示用户修改内容后重试
-- 排版异常：检查编辑器是否正确加载，必要时刷新页面重试
-- 标签无法激活：手动检查标签输入框是否正确填写
+- Login Failure: Prompt user to rescan the QR code
+- Publishing Failure: Check network connection, retry, or provide specific error information
+- Content Violation: Prompt user to modify content and retry
+- Formatting Anomaly: Check if the editor loaded correctly; refresh the page and retry if necessary
+- Tags Cannot Be Activated: Manually check if the tag input field was filled in correctly

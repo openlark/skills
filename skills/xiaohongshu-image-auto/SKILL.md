@@ -1,179 +1,176 @@
 ---
 name: xiaohongshu-image-auto
-description: 小红书自动发布图文。用户提供标题、正文后，自动完成登录检测、AI 生成配图、内容填充、AI 生成标签、标签激活、原创声明、执行发布的全流程。仅扫码登录需人工操作，其余步骤全自动化。使用场景：用户已有笔记内容需要发布到小红书。
+description: After users provide a title and body text, automatically completes the entire process: login detection, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 ---
 
-# 小红书自动发布图文
+# Xiaohongshu Automatic Image-Text Post Publishing
 
-## 核心定位
-**纯浏览器自动化，无需API和代码**。你只需提供标题和正文，剩下的步骤全部自动化完成。
+## Feature Overview
 
-| 输入项 | 说明 | 是否必填 |
-|--------|------|----------|
-| 标题 | 笔记标题，不超过20字 | ✅ 必填 |
-| 正文 | 笔记正文，不超过1000字 | ✅ 必填 |
+After users provide a title and body text, automatically completes the entire process: login detection, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing. Only QR code login requires manual operation; all other steps are fully automated.
 
-## 工作流程
+## Trigger Conditions
+
+Trigger this skill when the user mentions any of the following keywords:
+- Xiaohongshu image-text post publishing
+- Publish Xiaohongshu image-text post
+- Automatically publish Xiaohongshu image-text post
+- Xiaohongshu image-text notes
+- 小红书图文发布
+- 发布小红书图文
+- 自动发小红书图文
+- 小红书图文笔记
+
+
+## Use Cases
+- Users have existing note content ready to publish on Xiaohongshu.
+
+## Workflow
 ```
-你提供内容 → 启动浏览器 → 检测登录 → AI生成配图 → 自动填充 → AI生成标签 → 激活标签 → 声明原创 → 发布笔记
+You provide content → Launch browser → Check login → AI generate images → Auto-fill → AI generate tags → Activate tags → Declare original → Publish note
             ↑
-    仅扫码登录需手动操作
+    Only QR code login requires manual operation
 ```
 
-## 前置准备
-### 浏览器环境
-- 使用host模式启动浏览器
-- 打开小红书创作平台：https://creator.xiaohongshu.com/publish/publish
+## Prerequisites
+### Browser Environment
+- Start the browser using host mode
+- Open the Xiaohongshu Creator Platform: https://creator.xiaohongshu.com/publish/publish
 
-### 账号登录
-- **只需手动扫码登录**
-- 检测到未登录时自动暂停并提示
-- 登录成功后自动继续执行
+### Account Login
+- **Only manual QR code login is required**
+- Automatically pauses and prompts when not logged in is detected
+- Automatically continues execution after successful login
 
-## 自动化执行步骤
+## Automated Execution Steps
 
-### 1. 启动浏览器并检测登录状态
+### 1. Launch Browser and Check Login Status
 ```bash
 browser start profile=openclaw target=host
 browser navigate https://creator.xiaohongshu.com/publish/publish
 browser snapshot refs=aria
 ```
-**登录检测逻辑**：
-- 检查页面是否包含登录表单
-- 如未登录则截图提示用户扫码
-- 每15秒自动轮询检测，登录后继续
+**Login Detection Logic**:
+- Check if the page contains a login form
+- If not logged in, take a screenshot and prompt the user to scan the QR code
+- Poll every 15 seconds automatically; continue after login
 
-### 2. 切换到图文发布模式
+### 2. Switch to Image-Text Publishing Mode
 ```bash
-browser act ref=<上传图文按钮> kind=click
+browser act ref=<Upload Image-Text Button> kind=click
 ```
 
-### 3. AI自动生成配图
+### 3. AI Automatically Generates Images
 ```bash
-# 点击“文字配图”
-browser act ref=<文字配图按钮> kind=click
+# Click the "Text to Image" button
+browser act ref=<Text to Image Button> kind=click
 
-# 输入图片描述
-browser act ref=<文本框> kind=type text="<用户标题>"
+# Enter image description
+browser act ref=<Text Box> kind=type text="<User Title>"
 
-# 生成图片并选择样式（默认“基础”）
-browser act ref=<生成按钮> kind=click
-browser act ref=<样式按钮> kind=click
-browser act ref=<下一步按钮> kind=click
+# Generate image and select style (default "Basic")
+browser act ref=<Generate Button> kind=click
+browser act ref=<Style Button> kind=click
+browser act ref=<Next Button> kind=click
 ```
 
-### 4. 自动填充标题和正文
+### 4. Automatically Fill Title and Body Text
 ```bash
-browser act ref=<标题输入框> kind=type text="<用户标题>"
-browser act ref=<正文输入框> kind=type text="<用户正文>"
+browser act ref=<Title Input Field> kind=type text="<User Title>"
+browser act ref=<Body Input Field> kind=type text="<User Body Text>"
 ```
-**字数检查**：
-- 标题超过20字 → 自动裁剪并提示
-- 正文超过1000字 → 自动裁剪并提示
+**Character Count Check**:
+- Title exceeds 20 characters → Automatically truncate and prompt
+- Body text exceeds 1000 characters → Automatically truncate and prompt
 
-### 5. AI生成标签（如用户未提供）
+### 5. AI Generate Tags (if user does not provide)
 ```bash
-# 分析标题和正文，生成5-10个相关标签
-# 标签类型：核心话题、场景标签、情绪标签
+# Analyze title and body text, generate 5-10 relevant tags
+# Tag types: Core topics, Scene tags, Emotion tags
 ```
-**生成规则**：
-- 从标题提取核心关键词
-- 从正文提取高频词
-- 补充热门相关标签
+**Generation Rules**:
+- Extract core keywords from the title
+- Extract high-frequency words from the body text
+- Supplement with popular related tags
 
-### 6. 激活话题标签
+### 6. Activate Topic Tags
 
-**关键规则**：必须点击弹窗推荐项的第一项，标签才能变为可搜索链接
+**Key Rule**: Must click the first item in the pop-up recommendation list for the tag to become a searchable link
 
 ```bash
-# 对每个标签执行以下流程
-for each 标签 in 标签列表:
-    # 步骤 1：点击话题按钮，打开输入框
-    browser act ref=<话题按钮> kind=click
+# Execute the following process for each tag
+for each tag in tag list:
+    # Step 1: Click the topic button to open the input field
+    browser act ref=<Topic Button> kind=click
     
-    # 步骤 2：输入标签名（含#号）
-    browser act ref=<话题输入框> kind=type text="#标签名"
+    # Step 2: Enter the tag name (including # symbol)
+    browser act ref=<Topic Input Field> kind=type text="#tagname"
     
-    # 步骤 3：等待推荐弹窗出现（约 1 秒）
+    # Step 3: Wait for the recommendation pop-up to appear (approx. 1 second)
     browser snapshot refs=aria
     
-    # 步骤 4：点击推荐列表中的第一项（必须！）
-    browser act ref=<推荐列表第一项> kind=click
+    # Step 4: Click the first item in the recommendation list (must!)
+    browser act ref=<First Item in Recommendation List> kind=click
     
-    # 步骤 5：确认标签已激活（显示为蓝色链接）
-    # 继续下一个标签
+    # Step 5: Confirm the tag is activated (displayed as a blue link)
+    # Continue to the next tag
 ```
 
-**激活成功标志**：
-- 标签变为蓝色可点击链接
-- 格式：`[话题]#标签名`
+**Activation Success Indicator**:
+- Tag becomes a clickable blue link
+- Format: `[Topic]#tagname`
 
-**注意事项**：
-- ⚠️ 必须点击推荐弹窗，直接输入无效
-- ⚠️ 必须点击第一项，确保标签标准化
-- ⚠️ 每个标签都需要单独激活
+**Important Notes**:
+- ⚠️ Must click the recommendation pop-up; direct input is invalid
+- ⚠️ Must click the first item to ensure tag standardization
+- ⚠️ Each tag needs to be activated individually
 
-### 7. 勾选原创声明
+### 7. Check Original Content Declaration
 ```bash
-browser act ref=<原创声明checkbox> kind=click
-browser act ref=<同意checkbox> kind=click
-browser act ref=<声明原创按钮> kind=click
+browser act ref=<Original Declaration Checkbox> kind=click
+browser act ref=<Agree Checkbox> kind=click
+browser act ref=<Declare Original Button> kind=click
 ```
 
-### 8. 执行发布
+### 8. Execute Publishing
 ```bash
-browser act ref=<发布按钮> kind=click
+browser act ref=<Publish Button> kind=click
 browser snapshot refs=aria
 ```
-**发布成功标志**：页面显示“发布成功”或跳转到“笔记管理”页面
+**Publishing Success Indicator**: Page displays "Published Successfully" or redirects to the "Note Management" page
 
-## 异常处理
+## Exception Handling
 
-| 问题 | 处理方式 |
+| Issue | Handling Method |
 |------|----------|
-| 登录超时 | 截图提示，自动轮询检测登录状态 |
-| 标题超长 | 自动裁剪至20字，提示用户确认 |
-| 发布失败 | 截图记录，提示用户重试或转人工 |
+| Login timeout | Take screenshot, poll automatically to detect login status |
+| Title too long | Automatically truncate to 20 characters, prompt user to confirm |
+| Publishing failed | Take screenshot record, prompt user to retry or escalate to manual |
 
-## 发布后工作
+## Key Considerations
+### Account Security
+- Only QR code login requires manual operation
+- Recommended publishing interval ≥ 30 minutes
+- Automatically check content compliance before publishing
 
-### 自动记录日志
-在 `memory/xhs-YYYY-MM-DD.md` 中写入：
-```markdown
-## 发布记录
-| 项目 | 内容 |
-|------|------|
-| 标题 | 用户标题 |
-| 图片 | AI生成1张 |
-| 标签 | 共X个 |
-| 发布时间 | xhs-YYYY-MM-DD HH:MM |
-| 状态 | ✅ 已发布 |
-```
+### Content Compliance
+- Title ≤ 20 characters, Body text ≤ 1000 characters
+- Avoid absolute terms, medical efficacy claims, price inducement language
 
-## 核心注意事项
-### 账号安全
-- 仅扫码登录需人工操作
-- 发布间隔建议≥30分钟
-- 发布前自动检查内容合规
+### Recommended Publishing Frequency
+- New accounts: Daily or every other day
+- Established accounts: Adjust based on follower activity times
 
-### 内容合规
-- 标题≤20字，正文≤1000字
-- 避免绝对化用语、医疗功效词、价格诱导语
-
-### 发布频率建议
-- 新号：日更或隔日更
-- 成熟号：根据粉丝活跃时间调整
-
-## 常用命令速查
+## Quick Command Reference
 ```bash
-browser navigate <URL>        # 打开页面
-browser snapshot refs=aria     # 获取页面元素
-browser act ref=<元素> kind=click  # 点击元素
-browser act ref=<元素> kind=type text="内容"  # 输入文本
-browser screenshot             # 截图
+browser navigate <URL>        # Open a page
+browser snapshot refs=aria     # Get page elements
+browser act ref=<Element> kind=click  # Click an element
+browser act ref=<Element> kind=type text="Content"  # Input text
+browser screenshot             # Take a screenshot
 ```
 
-## 示例
+## Example
 ```
 使用 xiaohongshu-image-auto 技能。汇总今日国内AI领域重要发布。
 ```

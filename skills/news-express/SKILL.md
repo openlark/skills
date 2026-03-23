@@ -1,114 +1,118 @@
 ---
 name: news-express
-description: 当用户询问新闻更新、每日简报或世界上发生的事情时，应使用此技能。从可靠的国际和中国 RSS 订阅源获取新闻。不需要 API Key。
+description: Use this skill when users ask for news updates, daily briefings, or what's happening in the world. Fetches news from reliable international and Chinese RSS feeds. No API key required.
 ---
 
-# 新闻快报
+# News Express
 
-## 概览
+## Overview
 
-从国内外可信 RSS 订阅源获取并汇总新闻，**无需任何 API Key**，直接通过 `web_fetch` 工具读取 RSS XML 即可。
+Fetches and aggregates news from trusted domestic and international RSS feeds, **requiring no API keys**. Simply use the `web_fetch` tool to read RSS XML directly.
 
-## 触发场景
+## Trigger Scenarios
 
 - 用户问"今天有什么新闻"、"最新资讯"、"每日简报"
 - 用户问"国内/国际发生了什么"
 - 用户要求科技、财经、体育等分类新闻
 - 用户要求"早报"、"晚报"、"新闻摘要"
+- User asks "what's the news today", "latest updates", "daily briefing"
+- User asks "what's happening domestically/internationally"
+- User requests categorized news such as technology, finance, sports
+- User asks for "morning briefing", "evening briefing", "news summary"
 
 ---
 
-## RSS 订阅源
+## RSS Feeds
 
-### 🇨🇳 国内源
+### 🇨🇳 Domestic Sources
 
-| 来源 | 分类 | URL |
+| Source | Category | URL |
 |------|------|-----|
-| 36氪 | 科技/商业 | `https://36kr.com/feed` |
-| 知乎日报 | 动漫/游戏/财经/电影/互联网安全 | `https://plink.anyfeeder.com/zhihu/daily` |
-| Odaily星球日报 | 快讯 | `https://rss.odaily.news/rss/newsflash` |
-| 智东西 | 快讯/头条/人工智能/机器人 | `https://zhidx.com/rss` |
-| 奇客 | 科技 | `https://www.solidot.org/index.rss` |
-| PANews | 快讯 | `https://www.panewslab.com/rss.xml?lang=zh&type=NEWS&featured=true` |
-| IT之家 | AI/科技/数码 | `https://www.ithome.com/rss/` |
-| cnBeta | AI/科技/数码 | `https://plink.anyfeeder.com/cnbeta` |
-| 少数派 | 科技/数码 | `https://sspai.com/feed` |
-| IT桔子 | 金融 | `https://www.itjuzi.com/api/telegraph.xml` |
-| 虎嗅 | 商业/科技 | `https://www.huxiu.com/rss/0.xml` |
-| 爱范儿 | 早报/快讯 | `https://www.ifanr.com/feed` |
-| 华尔街日报 | 资讯/要闻 | `https://plink.anyfeeder.com/wsj/cn` |
-| 纽约时报 | 科技/商业/政治/健康 | `https://plink.anyfeeder.com/nytimes/cn` |
-| 人民日报 | 头条 | `http://www.people.com.cn/rss/politics.xml` |
+| 36Kr | Technology/Business | `https://36kr.com/feed` |
+| Zhihu Daily | Animation/Games/Finance/Movies/Internet Security | `https://plink.anyfeeder.com/zhihu/daily` |
+| Odaily | Flash News | `https://rss.odaily.news/rss/newsflash` |
+| Zhidx | Flash News/Headlines/AI/Robotics | `https://zhidx.com/rss` |
+| Solidot | Technology | `https://www.solidot.org/index.rss` |
+| PANews | Flash News | `https://www.panewslab.com/rss.xml?lang=zh&type=NEWS&featured=true` |
+| IT之家 | AI/Technology/Digital | `https://www.ithome.com/rss/` |
+| cnBeta | AI/Technology/Digital | `https://plink.anyfeeder.com/cnbeta` |
+| SSPAI | Technology/Digital | `https://sspai.com/feed` |
+| IT桔子 | Finance | `https://www.itjuzi.com/api/telegraph.xml` |
+| Huxiu | Business/Technology | `https://www.huxiu.com/rss/0.xml` |
+| ifanr | Morning Briefing/Flash News | `https://www.ifanr.com/feed` |
+| The Wall Street Journal | News/Headlines | `https://plink.anyfeeder.com/wsj/cn` |
+| The New York Times | Technology/Business/Politics/Health | `https://plink.anyfeeder.com/nytimes/cn` |
+| People's Daily | Headlines | `http://www.people.com.cn/rss/politics.xml` |
 
-### 🌍 国际源
+### 🌍 International Sources
 
-| 来源 | 分类 | URL |
+| Source | Category | URL |
 |------|------|-----|
 | OpenAI | AI | `https://openai.com/news/rss.xml` |
-| Al Jazeera | 全球 | `https://www.aljazeera.com/xml/rss/all.xml` |
-| NPR | 美国 | `https://feeds.npr.org/1001/rss.xml` |
-| The Guardian | 综合 | `https://www.theguardian.com/world/rss` |
-| TechCrunch | 科技 | `https://techcrunch.com/feed/` |
-| Hacker News | 科技/开发 | `https://hnrss.org/frontpage` |
-| PANews | 快讯 | `https://www.panewslab.com/rss.xml?lang=en&type=NEWS&featured=true` |
+| Al Jazeera | Global | `https://www.aljazeera.com/xml/rss/all.xml` |
+| NPR | United States | `https://feeds.npr.org/1001/rss.xml` |
+| The Guardian | Comprehensive | `https://www.theguardian.com/world/rss` |
+| TechCrunch | Technology | `https://techcrunch.com/feed/` |
+| Hacker News | Technology/Development | `https://hnrss.org/frontpage` |
+| PANews | Flash News | `https://www.panewslab.com/rss.xml?lang=en&type=NEWS&featured=true` |
 | ArXiv | AI | `https://rss.arxiv.org/rss/cs.AI` |
-| 中国日报 | 英文/国际 | `https://www.chinadaily.com.cn/rss/china_rss.xml` |
+| China Daily | English/International | `https://www.chinadaily.com.cn/rss/china_rss.xml` |
 
 ---
 
-## 工作流程
+## Workflow
 
-### 第一步：获取 RSS 内容
+### Step 1: Fetch RSS Content
 
-使用 `web_fetch` 工具直接读取 RSS XML：
+Use the `web_fetch` tool to read RSS XML directly:
 
 ```
 web_fetch(url="https://openai.com/news/rss.xml")
 web_fetch(url="https://36kr.com/feed")
 ```
 
-### 第二步：解析标题
+### Step 2: Parse Titles
 
-RSS XML 结构中，新闻标题在 `<title>` 标签内，摘要在 `<description>` 标签内，链接在 `<link>` 标签内。直接从 `web_fetch` 返回的 markdown 文本中提取即可。
+In the RSS XML structure, news headlines are within `<title>` tags, summaries within `<description>` tags, and links within `<link>` tags. Simply extract them from the markdown text returned by `web_fetch`.
 
-### 第三步：汇总输出
+### Step 3: Compile and Output
 
-按国内、国际整理，各取 6-8 条，每条输出标题和简洁摘要。
+Organize by domestic and international categories, taking 6-8 items each, outputting each headline with a concise summary.
 
 ---
 
-## 输出格式
+## Output Format
 
 ```
-📰 [最新资讯]
-🗓️ [日期] · [星期]
+📰 [Latest News]
+🗓️ [Date] · [Day of Week]
 
-🇨🇳 国内
-• [标题1] 
-[摘要1]
-• [标题2] 
-[摘要2]
-• [标题3] 
-[摘要3]
+🇨🇳 Domestic
+• [Headline 1] 
+[Summary 1]
+• [Headline 2] 
+[Summary 2]
+• [Headline 3] 
+[Summary 3]
 
-🌍 国际
-• [标题1] 
-[摘要1]
-• [标题2] 
-[摘要2]
-• [标题3] 
-[摘要3]
+🌍 International
+• [Headline 1] 
+[Summary 1]
+• [Headline 2] 
+[Summary 2]
+• [Headline 3] 
+[Summary 3]
 
 
 ---
-数据来源：RSS 订阅 · 无需 API
+Data Source: RSS Feeds · No API Required
 ```
 
 ---
 
-## 注意事项
+## Important Notes
 
-- **无需 API Key**：所有数据通过公开 RSS 订阅获取
-- **部分国内源可能需要网络环境支持**：如遇访问失败，自动切换备用源
-- **内容时效性**：RSS 通常每 15-60 分钟更新一次
-- **语言**：国内源中文输出，国际源可中英双语
+- **No API Key Required**: All data is obtained through public RSS feeds
+- **Some domestic sources may require proper network access**: If access fails, automatically switch to backup sources
+- **Content Timeliness**: RSS typically updates every 15-60 minutes
+- **Language**: Domestic sources output in Chinese, international sources can be bilingual (Chinese/English)

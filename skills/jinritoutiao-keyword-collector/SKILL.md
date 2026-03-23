@@ -1,72 +1,88 @@
 ---
 name: jinritoutiao-keyword-collector
-description: 今日头条搜索关键词收集工具。通过浏览器自动化访问今日头条首页，在搜索栏输入关键词并收集自动提示框中的相关关键词建议。使用场景：用户需要收集今日头条热门搜索词、关键词联想、SEO 关键词研究、内容创作灵感。触发词："今日头条关键词"、"收集头条关键词"、"头条搜索建议"、"jinritoutiao keywords"。
+description: Automatically accesses the Jinri Toutiao homepage via browser automation, inputs keywords into the search bar, and collects related keyword suggestions from the auto-suggest dropdown.
 ---
 
-# 今日头条关键词收集
+# Jinri Toutiao Keyword Collector
 
-## 功能概述
+## Feature Overview
 
-本技能通过浏览器自动化访问今日头条 (www.toutiao.com)，模拟用户在搜索框输入关键词的行为，自动收集搜索下拉提示框中显示的相关关键词建议。
+This skill uses browser automation to access Jinri Toutiao (www.toutiao.com), simulates user behavior of entering keywords in the search box, and automatically collects the relevant keyword suggestions displayed in the search dropdown.
 
-## 使用场景
+## Trigger Conditions
 
-- SEO 关键词研究和优化
-- 内容创作灵感收集
-- 热点话题发现
-- 竞品关键词分析
-- 市场调研和趋势分析
+Trigger this skill when the user mentions any of the following keywords:
+- 今日头条关键词
+- 收集头条关键词
+- 头条搜索建议
+- 头条热门词
+- 头条 SEO
+- 头条话题
+- Jinri Toutiao keywords
+- Collect Toutiao keywords
+- Toutiao search suggestions
+- Toutiao trending keywords
+- Toutiao SEO
+- Toutiao topics
 
-## 操作流程
+## Use Cases
 
-### 1. 启动浏览器
+- SEO keyword research and optimization
+- Content creation inspiration gathering
+- Trending topic discovery
+- Competitor keyword analysis
+- Market research and trend analysis
 
-使用 `browser` 工具启动浏览器：
+## Operation Workflow
+
+### 1. Launch Browser
+
+Use the `browser` tool to launch the browser:
 
 ```
 action: start
 profile: openclaw
 ```
 
-### 2. 访问今日头条首页
+### 2. Access Jinri Toutiao Homepage
 
-导航到今日头条：
+Navigate to Jinri Toutiao:
 
 ```
 action: navigate
 targetUrl: https://www.toutiao.com
 ```
 
-等待页面加载完成。
+Wait for the page to fully load.
 
-### 3. 获取页面快照
+### 3. Get Page Snapshot
 
-使用 `snapshot` 获取页面元素结构，识别搜索框位置：
+Use `snapshot` to get the page element structure and locate the search box:
 
 ```
 action: snapshot
 refs: aria
 ```
 
-在快照结果中查找搜索框元素（通常包含"搜索"、"search"等关键词的 input 元素）。
+Search for the search box element in the snapshot results (typically an input element containing keywords like "search").
 
-### 4. 输入关键词
+### 4. Input Keywords
 
-使用 `act` 工具在搜索框中输入关键词：
+Use the `act` tool to input keywords into the search box:
 
 ```
 action: act
-ref: <搜索框的 ref 值>
+ref: <ref value of the search box>
 kind: type
-text: <用户提供的关键词>
+text: <user-provided keyword>
 slowly: true
 ```
 
-设置 `slowly: true` 以确保页面能够正确触发自动提示。
+Set `slowly: true` to ensure the page can properly trigger the auto-suggest functionality.
 
-### 5. 等待提示框出现
+### 5. Wait for Suggestion Dropdown
 
-输入完成后，等待 1-2 秒让自动提示框加载：
+After input is complete, wait 1-2 seconds for the auto-suggest dropdown to load:
 
 ```
 action: act
@@ -74,75 +90,76 @@ kind: wait
 timeMs: 2000
 ```
 
-### 6. 获取提示框快照
+### 6. Get Dropdown Snapshot
 
-再次获取页面快照，这次包含自动提示框中的关键词列表：
+Take another page snapshot, this time capturing the keyword list in the auto-suggest dropdown:
 
 ```
 action: snapshot
 refs: aria
 ```
 
-### 7. 提取关键词
+### 7. Extract Keywords
 
-从快照结果中提取提示框中的所有关键词文本。提示框通常包含多个 `option`、`li` 或 `div` 元素，每个元素包含一个建议关键词。
+Extract all keyword text from the snapshot results within the suggestion dropdown. The dropdown typically contains multiple `option`, `li`, or `div` elements, each containing a suggested keyword.
 
-### 8. 输出格式
+### 8. Output Format
+
 ```
-关键词：[输入的关键词]
-搜索建议词：
-1. 建议词1
-2. 建议词2
-3. 建议词3
+Keyword: [Input Keyword]
+Search Suggestions:
+1. Suggestion 1
+2. Suggestion 2
+3. Suggestion 3
 ...
 ```
 
-### 9. 清理（可选）
+### 9. Cleanup (Optional)
 
-如果用户没有进一步需求，可以关闭浏览器：
+If the user has no further requests, close the browser:
 
 ```
 action: close
 ```
 
-## 注意事项
+## Important Notes
 
-1. **网络延迟**：今日头条页面加载可能需要时间，确保在操作前有足够等待时间
-2. **元素定位**：使用 `refs: aria` 可以获得更稳定的元素引用
-3. **输入速度**：设置 `slowly: true` 确保页面能正确触发自动提示
-4. **反爬虫机制**：避免短时间内频繁请求，建议在多次收集之间间隔 5-10 秒
-5. **会话保持**：如需多次收集，保持浏览器会话开启以提高效率
+1. **Network Latency**: Jinri Toutiao page loading may take time; ensure sufficient waiting time before operations
+2. **Element Locating**: Using `refs: aria` provides more stable element references
+3. **Input Speed**: Setting `slowly: true` ensures the page can properly trigger auto-suggest
+4. **Anti-scraping Mechanisms**: Avoid frequent requests in a short period; it is recommended to wait 5-10 seconds between multiple collections
+5. **Session Persistence**: For multiple collections, keep the browser session open to improve efficiency
 
-## 多关键词批量收集
+## Batch Collection for Multiple Keywords
 
-如需收集多个关键词的建议，可以：
+To collect suggestions for multiple keywords:
 
-1. 保持浏览器会话开启
-2. 对每个关键词重复步骤 4-7
-3. 使用 `act` 的 `kind: type` 清空搜索框后输入新关键词
-4. 将所有结果整理成一个汇总报告
+1. Keep the browser session open
+2. Repeat steps 4-7 for each keyword
+3. Use `act` with `kind: type` to clear the search box before entering a new keyword
+4. Compile all results into a summary report
 
-## 故障排查
+## Troubleshooting
 
-### 搜索框找不到
+### Search Box Not Found
 
-- 检查页面是否完全加载
-- 尝试刷新页面后重试
-- 使用更详细的快照（增加 `depth` 参数）
+- Check if the page has fully loaded
+- Try refreshing the page and retrying
+- Use a more detailed snapshot (add the `depth` parameter)
 
-### 提示框不出现
+### Suggestion Dropdown Does Not Appear
 
-- 确认输入速度足够慢（`slowly: true`）
-- 增加等待时间（`timeMs: 3000` 或更长）
-- 检查网络连接是否正常
+- Ensure input speed is slow enough (`slowly: true`)
+- Increase wait time (`timeMs: 3000` or longer)
+- Check if the network connection is normal
 
-### 关键词列表为空
+### Keyword List is Empty
 
-- 确认输入的关键词有效
-- 尝试更换常见关键词测试
-- 检查今日头条是否有页面结构更新
+- Verify the input keyword is valid
+- Try testing with common keywords
+- Check if Jinri Toutiao has updated its page structure
 
-## 参考资源
+## Reference Resources
 
-- 浏览器自动化最佳实践：见 `references/browser-automation-best-practices.md`
-- 今日头条页面结构说明：见 `references/toutiao-structure.md`
+- Browser Automation Best Practices: See `references/browser-automation-best-practices.md`
+- Jinri Toutiao Page Structure Description: See `references/toutiao-structure.md`

@@ -1,80 +1,80 @@
-# 今日头条页面结构说明
+# Today's Headlines Page Structure Description
 
-## 首页元素
+## Homepage Elements
 
-### 搜索框
+### Search Box
 
-- **位置**：页面顶部导航栏
-- **特征**：
-  - input 元素
-  - placeholder 包含"搜索"字样
-  - 通常有 search 图标相邻
-- **ARIA 标签**：可能包含"search"、"搜索"等关键词
+- **Location**: Top navigation bar of the page
+- **Features**:
+  - input element
+  - placeholder contains the word "search"
+  - usually accompanied by a search icon
+- **ARIA Label**: may include keywords like "search" or "搜索"
 
-### 搜索提示框
+### Search Suggestion Box
 
-- **触发条件**：在搜索框输入文本后
-- **位置**：搜索框正下方
-- **元素类型**：
-  - div 容器
-  - 内部包含多个 li 或 div 项
-  - 每项包含一个建议关键词
-- **延迟**：输入后约 200-500ms 出现
+- **Trigger Condition**: After entering text in the search box
+- **Location**: Directly below the search box
+- **Element Type**:
+  - div container
+  - contains multiple li or div items
+  - each item includes a suggested keyword
+- **Delay**: Appears about 200-500ms after input
 
-## 常见元素选择器
+## Common Element Selectors
 
-### 搜索框识别
+### Search Box Identification
 
-在快照中查找：
+Check in snapshot for:
 - role: "searchbox"
-- role: "textbox" 
-- name 包含"搜索"
-- placeholder 包含"搜索"
+- role: "textbox"
+- name contains "搜索"
+- placeholder contains "搜索"
 
-### 提示项识别
+### Suggestion Item Identification
 
-在快照中查找：
-- 位于搜索框下方的列表项
-- role: "option" 或 role: "listitem"
-- 包含文本内容的可点击元素
+Check in snapshot for:
+- list items located below the search box
+- role: "option" or role: "listitem"
+- clickable elements containing text content
 
-## 页面加载特征
+## Page Loading Characteristics
 
-### 首屏加载
+### First Screen Load
 
-- 导航栏：1-2 秒
-- 推荐内容：2-4 秒
-- 完全加载：5-8 秒
+- Navigation bar: 1-2 seconds
+- Recommended content: 2-4 seconds
+- Fully loaded: 5-8 seconds
 
-### 动态加载
+### Dynamic Loading
 
-- 搜索提示：输入后 200-500ms
-- 搜索结果：提交后 1-3 秒
-- 无限滚动：滚动后 1-2 秒
+- Search suggestions: 200-500ms after input
+- Search results: 1-3 seconds after submission
+- Infinite scroll: 1-2 seconds after scrolling
 
-## 反爬机制
+## Anti-Scraping Mechanism
 
-### 检测特征
+### Detection Features
 
-- 高频请求
-- 异常输入速度
-- 无鼠标移动轨迹
+- High-frequency requests
+- Abnormal input speed
+- No mouse movement traces
 
-### 规避建议
+### Avoidance Suggestions
 
-- 输入使用 `slowly: true`
-- 操作间隔 2-5 秒
-- 避免短时间内大量请求
-- 使用正常浏览器配置文件
+- Input using `slowly: true`
+- 2-5 seconds intervals between operations
+- Avoid a large number of requests in a short time
+- Use a normal browser configuration profile
 
-## 更新日志
+## Update Log
 
-### 2024 年常见结构
+### Common Structure in 2024
 
 ```
-搜索框：input[aria-label*="搜索"]
-提示框：div.suggestion-list
-提示项：div.suggestion-item
+Search box: input[aria-label*="搜索"]
+Suggestion box: div.suggestion-list
+Suggestion item: div.suggestion-item
 ```
 
-**注意**：页面结构可能随时更新，实际操作中以实时快照为准。
+**Note**: Page structure may update at any time; rely on real-time snapshots for actual operations.

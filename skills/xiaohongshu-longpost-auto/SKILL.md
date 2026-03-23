@@ -1,324 +1,285 @@
 ---
 name: xiaohongshu-longpost-auto
-description: 小红书自动长文发布工具。用户已有长文内容需要发布到小红书时，自动完成登录检测、长文内容分段优化、AI 生成配图、内容填充、AI 生成标签、标签激活、原创声明、执行发布的全流程。仅扫码登录需人工操作，其余步骤全自动化。使用场景：用户已有笔记长文内容需要发布到小红书；触发词包括"小红书长文发布"、"发布小红书长文"、"自动发小红书长文"、"小红书长文笔记"、"小红书文章发布"。
+description: When users have long-form content ready to publish on Xiaohongshu, automatically completes the entire process: login detection, long content segmentation optimization, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 ---
 
-# 小红书自动长文发布
+# Xiaohongshu Automatic Long-Form Post Publishing
 
-> 自动化将长文内容发布到小红书的完整流程
+## Feature Overview
 
----
+When users have long-form content ready to publish on Xiaohongshu, automatically completes the entire process: login detection, long content segmentation optimization, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing. Only QR code login requires manual operation; all other steps are fully automated.
 
-## 📋 用户需提供
+## Trigger Conditions
 
-| 项目 | 说明 | 是否必填 |
-|------|------|----------|
-| 标题 | 笔记标题（≤20 字） | 可选，AI 可生成 |
-| 正文 | 长文内容（支持 Markdown） | 必填 |
-| 描述要求 | AI 生成描述时的特殊要求 | 可选 |
+Trigger this skill when the user mentions any of the following keywords:
 
----
+- Xiaohongshu long-form post publishing
+- Publish Xiaohongshu long-form post
+- Automatically publish Xiaohongshu long-form post
+- Xiaohongshu long-form notes
+- Xiaohongshu article publishing
+- 小红书长文发布
+- 发布小红书长文
+- 自动发小红书长文
+- 小红书长文笔记
+- 小红书文章发布
 
-## 🔄 工作流程
+## Use Cases
+
+- Users have existing long-form note content ready to publish on Xiaohongshu
+
+## 🔄 Workflow
 
 ```
-1. 内容预处理 → 2. 登录检测 → 3. 进入发布页 → 4. 填写内容 → 
-5. 一键排版 → 6. 选择模板 → 7. 生成描述 → 8. 添加标签 → 
-9. 声明原创 → 10. 发布
+1. Content Preprocessing → 2. Login Detection → 3. Enter Publishing Page → 4. Fill Content → 
+5. One-Click Formatting → 6. Select Template → 7. Generate Description → 8. Add Tags → 
+9. Declare Original → 10. Publish
 ```
 
----
+## Step-by-Step Guide
 
-## 步骤详解
+### 1️⃣ Content Preprocessing
 
-### 1️⃣ 内容预处理
+**Segmentation Principles:**
+- 300-500 characters per paragraph to maintain reading rhythm
+- Add subheadings for easy browsing
+- Front-load key information; present core points at the beginning of each paragraph
+- Appropriate spacing with blank lines between paragraphs
+- Moderate use of emojis ✨💡
 
-**分段原则：**
-- 每段 300-500 字，保持阅读节奏
-- 添加小标题，方便快速浏览
-- 关键信息前置，每段开头给核心观点
-- 适当留白，段落间空行
-- 适度添加表情符号 ✨💡
-
-**内容结构：**
+**Content Structure:**
 ```
-开头钩子（50-100 字）→ 引发好奇或共鸣
-正文分段（每段 300-500 字）→ 问题/背景 → 分析/方法 → 案例/经验 → 总结/建议
-结尾互动（50 字）→ 引导评论或收藏
+Opening Hook (50-100 chars) → Spark curiosity or resonate
+Body Paragraphs (300-500 chars each) → Problem/Background → Analysis/Methods → Cases/Experience → Summary/Suggestions
+Closing Interaction (50 chars) → Encourage comments or saves
 ```
 
----
+### 2️⃣ Login Detection
 
-### 2️⃣ 登录检测
+**Visit:** `https://creator.xiaohongshu.com/`
 
-**访问：** `https://creator.xiaohongshu.com/`
-
-| 状态 | 操作 |
+| Status | Action |
 |------|------|
-| 已登录 | 直接进入发布页面 |
-| 未登录 | 提示用户扫码登录，等待完成 |
+| Logged in | Directly enter publishing page |
+| Not logged in | Prompt user to scan QR code, wait for completion |
 
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-// 检测登录状态
+// Detect login status
 browser.navigate('https://creator.xiaohongshu.com/')
-// 如果跳转到 /login 页面，说明未登录
+// If redirected to /login page, not logged in
 ```
 
----
+### 3️⃣ Enter Publishing Page
 
-### 3️⃣ 进入发布页
+**Visit:** `https://creator.xiaohongshu.com/publish/publish`
 
-**访问：** `https://creator.xiaohongshu.com/publish/publish`
+**Operation Steps:**
+1. Navigate to the publishing page
+2. Click the **"Write Long-Form Post"** button
+3. Click **"New Creation"** to enter the editor
 
-**操作步骤：**
-1. 导航到发布页面
-2. 点击 **「写长文」** 按钮
-3. 点击 **「新的创作」** 进入编辑器
-
-**技术实现：**
+**Technical Implementation:**
 ```javascript
 browser.navigate('https://creator.xiaohongshu.com/publish/publish')
-browser.snapshot() // 获取页面元素
-browser.act({ kind: 'click', ref: 'e111' }) // 点击"写长文"
-browser.act({ kind: 'click', ref: 'e148' }) // 点击"新的创作"
+browser.snapshot() // Get page elements
+browser.act({ kind: 'click', ref: 'e111' }) // Click "Write Long-Form Post"
+browser.act({ kind: 'click', ref: 'e148' }) // Click "New Creation"
 ```
 
----
+### 4️⃣ Fill Content
 
-### 4️⃣ 填写内容
-
-| 字段 | 要求 |
+| Field | Requirements |
 |------|------|
-| 标题 | ≤20 字，含 1-2 个关键词 |
-| 正文 | 粘贴预处理后的内容 |
+| Title | ≤20 characters, containing 1-2 keywords |
+| Body Text | Paste preprocessed content |
 
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-// 填写标题
-browser.act({ kind: 'type', ref: 'e253', text: '标题内容' })
+// Fill title
+browser.act({ kind: 'type', ref: 'e253', text: 'Title content' })
 
-// 填写正文（使用 evaluate 注入）
+// Fill body text (inject using evaluate)
 browser.act({
   kind: 'evaluate',
-  fn: "() => { const editor = document.querySelector('[contenteditable]'); editor.textContent = '正文内容'; editor.dispatchEvent(new InputEvent('input', {bubbles: true})); return 'done'; }"
+  fn: "() => { const editor = document.querySelector('[contenteditable]'); editor.textContent = 'Body content'; editor.dispatchEvent(new InputEvent('input', {bubbles: true})); return 'done'; }"
 })
 ```
 
----
+### 5️⃣ One-Click Formatting
 
-### 5️⃣ 一键排版
+Click the **"One-Click Formatting"** button; the system automatically optimizes the format.
 
-点击 **「一键排版」** 按钮，系统自动优化格式。
-
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-browser.act({ kind: 'click', ref: 'e260' }) // 点击"一键排版"
+browser.act({ kind: 'click', ref: 'e260' }) // Click "One-Click Formatting"
 ```
 
----
+### 6️⃣ Select Template
 
-### 6️⃣ 选择模板
-
-| 模板类型 | 适用场景 |
+| Template Type | Applicable Scenarios |
 |----------|----------|
-| 清新简约 | 生活分享、读书笔记 |
-| 职场干货 | 经验总结、技能分享 |
-| 活力时尚 | 美妆穿搭、潮流话题 |
-| 温暖治愈 | 情感故事、心灵鸡汤 |
-| 专业严谨 | 科普知识、教程攻略 |
-| 逻辑结构 | 科技资讯、行业分析 |
-| 简约基础 | 通用型内容 |
+| Fresh Minimalist | Lifestyle sharing, reading notes |
+| Workplace Expertise | Experience summaries, skill sharing |
+| Vibrant Fashion | Beauty/fashion, trending topics |
+| Warm Healing | Emotional stories, inspirational content |
+| Professional Rigorous | Educational content, tutorials, guides |
+| Logical Structure | Tech news, industry analysis |
+| Simple Basic | General content |
 
-> **原则：** 根据内容主题和目标受众选择
-> **推荐：** 科技/职场类内容选择「逻辑结构」或「职场干货」
+> **Principle:** Choose based on content theme and target audience
+> **Recommendation:** For tech/workplace content, select "Logical Structure" or "Workplace Expertise"
 
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-browser.act({ kind: 'click', ref: 'e334' }) // 点击"逻辑结构"模板
-browser.act({ kind: 'click', ref: 'e647' }) // 点击"下一步"
+browser.act({ kind: 'click', ref: 'e334' }) // Click "Logical Structure" template
+browser.act({ kind: 'click', ref: 'e647' }) // Click "Next"
 ```
 
----
+### 7️⃣ Generate Body Description
 
-### 7️⃣ 生成正文描述
+**Optimization Principles:**
 
-**优化原则：**
-
-| 要素 | 要求 |
+| Element | Requirements |
 |------|------|
-| 长度 | 50-100 字 |
-| 内容 | 概括核心观点或亮点 |
-| 语气 | 口语化、有亲和力 |
-| 钩子 | 开头设置悬念或痛点 |
-| 关键词 | 含 1-2 个搜索关键词 |
+| Length | 50-100 characters |
+| Content | Summarize core points or highlights |
+| Tone | Conversational, friendly |
+| Hook | Create suspense or highlight pain points at the beginning |
+| Keywords | Include 1-2 search keywords |
 
-**示例：**
-- ❌ "本文介绍了时间管理的几个方法"
-- ✅ "同样是 24 小时，为什么别人能做完 3 倍的工作？这 5 个时间管理技巧让我效率翻倍，第 3 个真的绝了！"
+**Example:**
+- ❌ "This article introduces several methods for time management"
+- ✅ "Same 24 hours, why can others get 3 times the work done? These 5 time management techniques doubled my productivity, number 3 is truly amazing!"
 
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-browser.act({ kind: 'type', ref: 'e706', text: '描述内容' })
+browser.act({ kind: 'type', ref: 'e706', text: 'Description content' })
 ```
 
----
+### 8️⃣ Add Tags
 
-### 8️⃣ 添加标签
+**Tag Structure (5-8 total):**
 
-**标签结构（总计 5-8 个）：**
-
-| 类型 | 数量 | 示例 |
+| Type | Quantity | Example |
 |------|------|------|
-| 核心标签 | 1-2 个 | #职场干货 #学习方法 |
-| 细分标签 | 2-3 个 | #时间管理 #效率提升 |
-| 热门标签 | 1-2 个 | #打工人 #学生党 |
-| 长尾标签 | 1-2 个 | #番茄工作法 #晨间日记 |
+| Core Tags | 1-2 | #WorkplaceExpertise #LearningMethods |
+| Niche Tags | 2-3 | #TimeManagement #Productivity |
+| Popular Tags | 1-2 | #OfficeWorkers #Students |
+| Long-Tail Tags | 1-2 | #PomodoroTechnique #MorningJournal |
 
-**检查要点：**
-- ✅ 标签数量 5-8 个
-- ✅ 与内容高度相关
-- ✅ 热门度平衡（大流量 + 精准）
+**Checklist:**
+- ✅ 5-8 tags total
+- ✅ Highly relevant to content
+- ✅ Balanced popularity (high traffic + precise)
 
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-browser.act({ kind: 'click', ref: 'e723' }) // 点击"话题"按钮
-browser.act({ kind: 'click', ref: 'e1033' }) // 点击推荐标签 "#人工智能"
-browser.act({ kind: 'click', ref: 'e712' }) // 点击推荐标签 "#大模型"
+browser.act({ kind: 'click', ref: 'e723' }) // Click "Topic" button
+browser.act({ kind: 'click', ref: 'e1033' }) // Click recommended tag "#ArtificialIntelligence"
+browser.act({ kind: 'click', ref: 'e712' }) // Click recommended tag "#LargeLanguageModels"
 ```
 
----
+### 9️⃣ Declare Original
 
-### 9️⃣ 声明原创
+**Operation Steps:**
+1. Check the **"Original Content Declaration"** checkbox
+2. In the pop-up, check **"I have read and agree"**
+3. Click the **"Declare Original"** button
 
-**操作步骤：**
-1. 勾选 **「原创声明」** 复选框
-2. 在弹窗中勾选 **「我已阅读并同意」**
-3. 点击 **「声明原创」** 按钮
-
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-browser.act({ kind: 'click', ref: 'e806' }) // 勾选原创声明
-browser.act({ kind: 'click', ref: 'e1083' }) // 勾选同意框
-browser.act({ kind: 'click', ref: 'e1088' }) // 点击"声明原创"
+browser.act({ kind: 'click', ref: 'e806' }) // Check original declaration
+browser.act({ kind: 'click', ref: 'e1083' }) // Check agreement box
+browser.act({ kind: 'click', ref: 'e1088' }) // Click "Declare Original"
 ```
 
----
+### 🔟 Publish
 
-### 🔟 发布
+**Pre-Publishing Checklist:**
+- [ ] Title complete and engaging (≤20 characters)
+- [ ] Body text formatting looks good
+- [ ] Body description engaging (50-100 characters)
+- [ ] Tags activated (5-8 tags)
+- [ ] Original declaration checked
 
-**发布前检查清单：**
-- [ ] 标题完整且吸引人（≤20 字）
-- [ ] 正文排版美观
-- [ ] 正文描述有吸引力（50-100 字）
-- [ ] 标签已激活（5-8 个）
-- [ ] 原创声明已勾选
-
-**技术实现：**
+**Technical Implementation:**
 ```javascript
-browser.act({ kind: 'click', ref: 'e1013' }) // 点击"发布"
+browser.act({ kind: 'click', ref: 'e1013' }) // Click "Publish"
 ```
 
-**发布成功标志：**
-- 页面显示绿色对勾 ✅
-- 显示「发布成功」文字
-- 3 秒后自动返回首页
+**Publication Success Indicators:**
+- Page displays green checkmark ✅
+- Displays "Published Successfully" text
+- Automatically returns to homepage after 3 seconds
 
----
+## ⚠️ Important Notes
 
-## 📝 使用示例
-
-### 示例：职场干货
-
-**用户输入：**
-```
-标题：工作 3 年，我总结了这 10 个高效工作习惯
-正文：[3000 字内容]
-```
-
-**处理流程：**
-```
-1. 检测登录 → 进入发布页 → 选择"写长文"
-2. 填写标题和正文
-3. 一键排版 → 选择"职场干货"模板
-4. AI 生成描述："同样是 24 小时，为什么别人能做完 3 倍的工作？工作 3 年总结的 10 个高效习惯，第 7 个让我薪资翻倍！"
-5. AI 生成标签：#职场干货 #工作效率 #打工人 #时间管理 #自我提升
-6. 激活标签 → 声明原创 → 发布
-```
-
----
-
-## ⚠️ 注意事项
-
-| 事项 | 说明 |
+| Item | Description |
 |------|------|
-| 内容合规 | 符合小红书社区规范，避免敏感词 |
-| 图片版权 | AI 生成图片避免版权风险 |
-| 发布频率 | 避免短时间内大量发布（建议间隔>1 小时） |
-| 互动维护 | 发布后关注评论互动，及时回复 |
-| 标题长度 | 严格控制在 20 字以内，否则无法发布 |
-| 标签数量 | 最少 3 个，最多 8 个，推荐 5-6 个 |
+| Content Compliance | Must comply with Xiaohongshu community guidelines; avoid sensitive words |
+| Image Copyright | AI-generated images should avoid copyright risks |
+| Publishing Frequency | Avoid publishing too frequently in a short period (recommended interval > 1 hour) |
+| Engagement Maintenance | Monitor comments after publishing and respond promptly |
+| Title Length | Strictly control within 20 characters; otherwise cannot publish |
+| Tag Count | Minimum 3, maximum 8, recommended 5-6 |
 
 ---
 
-## 🛠️ 错误处理
+## 🛠️ Error Handling
 
-| 错误场景 | 处理方式 |
+| Error Scenario | Handling Method |
 |----------|----------|
-| 登录失效 | 提示用户重新扫码登录，等待完成后继续 |
-| 元素未找到 | 重新 snapshot 获取最新 ref，重试 3 次 |
-| 内容注入失败 | 检查 contenteditable 元素，使用 focus()+click() 激活 |
-| 图片上传失败 | 重试 3 次，仍失败则跳过该图 |
-| 内容审核提示 | 提示用户修改敏感内容 |
-| 发布频率限制 | 提示等待后再试（通常需等待 1-24 小时） |
-| 标题超长 | 自动截断或 AI 重新生成短标题 |
+| Login expired | Prompt user to scan QR code again; wait for completion and continue |
+| Element not found | Re-snapshot to get latest ref, retry up to 3 times |
+| Content injection failed | Check contenteditable element, activate using focus()+click() |
+| Image upload failed | Retry up to 3 times; if still failing, skip that image |
+| Content moderation prompt | Prompt user to modify sensitive content |
+| Publishing frequency limit | Prompt user to wait before retrying (typically 1-24 hours) |
+| Title too long | Automatically truncate or have AI regenerate a shorter title |
 
-**调试技巧：**
+**Debugging Tips:**
 ```javascript
-// 1. 截图确认当前页面状态
+// 1. Screenshot to confirm current page status
 browser.screenshot({ fullPage: true })
 
-// 2. 获取最新元素引用
+// 2. Get latest element references
 browser.snapshot({ refs: 'aria' })
 
-// 3. 检查编辑器是否可编辑
+// 3. Check if editor is editable
 browser.act({ fn: "document.querySelector('[contenteditable]').isContentEditable" })
 ```
 
 ---
 
-## 🔧 技术细节
+## 🔧 Technical Details
 
-### 浏览器自动化要点
+### Browser Automation Essentials
 
-**1. 元素定位：**
-- 使用 `refs: 'aria'` 获取稳定的 aria-ref 定位
-- 避免使用易变的 XPath 或 CSS 选择器
+**1. Element Locating:**
+- Use `refs: 'aria'` to obtain stable aria-ref locators
+- Avoid using unstable XPath or CSS selectors
 
-**2. 内容注入：**
+**2. Content Injection:**
 ```javascript
-// 推荐方式：使用 evaluate + dispatchEvent
+// Recommended method: Use evaluate + dispatchEvent
 browser.act({
   kind: 'evaluate',
   fn: "() => {
     const editor = document.querySelector('[contenteditable]');
-    editor.textContent = '内容';
+    editor.textContent = 'Content';
     editor.dispatchEvent(new InputEvent('input', { bubbles: true }));
     return 'done';
   }"
 })
 ```
 
-**3. 等待策略：**
-- 点击后等待 500-1000ms 让页面响应
-- 使用 snapshot 确认元素状态后再操作
+**3. Waiting Strategy:**
+- Wait 500-1000ms after clicks to allow page to respond
+- Use snapshot to confirm element state before proceeding
 
----
+## 🔗 Reference Documentation
 
-## 🔗 参考文档
-
-- [小红书创作服务平台](https://creator.xiaohongshu.com/)
-- [小红书社区规范](https://www.xiaohongshu.com/community_guidelines)
-- [小红书长文发布指南](https://creator.xiaohongshu.com/help)
-
----
+- [Xiaohongshu Creator Platform](https://creator.xiaohongshu.com/)
+- [Xiaohongshu Community Guidelines](https://www.xiaohongshu.com/community_guidelines)
+- [Xiaohongshu Long-Form Post Guide](https://creator.xiaohongshu.com/help)
