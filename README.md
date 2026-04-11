@@ -29,6 +29,7 @@ At its core, a skill is a folder containing a `SKILL.md` file. This file include
 <summary><h3 style="display:inline">Tools</h3></summary>
 
 - [Microsoft Edge TTS](./skills/microsoft-edge-tts/SKILL.md) - Use Microsoft Edge online TTS service to convert text to speech. Supports command line and module invocation, no API key.
+- [ECharts](./skills/apache-echarts/SKILL.md) - Apache ECharts charting skill.
 - [Chart.js](./skills/chartjs/SKILL.md) - Chart.js charting skill. Used to generate visual charts such as line charts, bar charts, pie charts, radar charts, scatter plots, etc.
 
 </details>
