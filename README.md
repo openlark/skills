@@ -33,6 +33,7 @@ At its core, a skill is a folder containing a `SKILL.md` file. This file include
 - [Vercel CLI](./skills/vercel-cli/SKILL.md) - Vercel CLI skill for deploying and managing Vercel projects from the terminal.
 - [ECharts](./skills/apache-echarts/SKILL.md) - Apache ECharts charting skill.
 - [Chart.js](./skills/chartjs/SKILL.md) - Chart.js charting skill. Used to generate visual charts such as line charts, bar charts, pie charts, radar charts, scatter plots, etc.
+- [favicons](./skills/favicons/SKILL.md) - Use the favicons Node.js library to generate multi-platform website icons (Favicons).etc.
 
 </details>
 
