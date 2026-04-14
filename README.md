@@ -30,13 +30,17 @@ At its core, a skill is a folder containing a `SKILL.md` file. This file include
 
 - [Microsoft Edge TTS](./skills/microsoft-edge-tts/SKILL.md) - Use Microsoft Edge online TTS service to convert text to speech. Supports command line and module invocation, no API key.
 - [Microsoft MarkItDown](./skills/microsoft-markitdown/SKILL.md) - Use MarkItDown to convert various files (PDF, Word, Excel, PPT, images, audio, HTML, CSV, JSON, etc.) to Markdown format for LLM processing and text analysis. Also supports content extraction from ZIP archives, YouTube videos, and EPUB e-books.
-- [Vercel CLI](./skills/vercel-cli/SKILL.md) - Vercel CLI skill for deploying and managing Vercel projects from the terminal.
 - [ECharts](./skills/apache-echarts/SKILL.md) - Apache ECharts charting skill.
 - [Chart.js](./skills/chartjs/SKILL.md) - Chart.js charting skill. Used to generate visual charts such as line charts, bar charts, pie charts, radar charts, scatter plots, etc.
 - [favicons](./skills/favicons/SKILL.md) - Use the favicons Node.js library to generate multi-platform website icons (Favicons).etc.
 
+- [Vercel CLI](./skills/vercel-cli/SKILL.md) - Vercel CLI skill for deploying and managing Vercel projects from the terminal.
+
 - [Humanizer AI](./skills/humanizer-ai/SKILL.md) - Identify and eliminate traces of AI-generated text, making writing sound more natural and human.
 - [Detector AI](./skills/detector-ai/SKILL.md) - AI Detection Tool - Detect AI-generated text with multiple analysis methods including perplexity analysis, burstiness detection, readability scoring, and AI fingerprint detection. 
+- [Turnitin AI Checker](./skills/turnitin-ai-checker/SKILL.md) - Turnitin AI Detection Checker - Check if text would be flagged by Turnitin's AI detection before submitting. 
+- [AI Paraphraser](./skills/ai-paraphraser/SKILL.md) - AI paraphrasing and de-AI tool.
+- [AI Paragraph Rewriter](./skills/ai-paragraph-rewriter/SKILL.md) - Rewrite paragraphs to sound natural and human-written, bypassing AI detectors (GPTZero, Turnitin, Originality.ai). 
 
 </details>
 
