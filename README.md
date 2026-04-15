@@ -41,6 +41,10 @@ At its core, a skill is a folder containing a `SKILL.md` file. This file include
 - [Turnitin AI Checker](./skills/turnitin-ai-checker/SKILL.md) - Turnitin AI Detection Checker - Check if text would be flagged by Turnitin's AI detection before submitting. 
 - [AI Paraphraser](./skills/ai-paraphraser/SKILL.md) - AI paraphrasing and de-AI tool.
 - [AI Paragraph Rewriter](./skills/ai-paragraph-rewriter/SKILL.md) - Rewrite paragraphs to sound natural and human-written, bypassing AI detectors (GPTZero, Turnitin, Originality.ai). 
+- [Word Counter](./skills/word-counter/SKILL.md) - A comprehensive text analysis tool that counts words, characters, sentences, and paragraphs. Calculates reading time, speaking time, reading level (Flesch-Kincaid), and keyword density.
+- [Grammar Checker](./skills/grammar-checker/SKILL.md) - AI-powered English grammar, spelling, and style checker.
+- [Plagiarism Checker](./skills/plagiarism-checker/SKILL.md) - AI-powered English grammar, spelling, and style checker.
+- [Text Summarizer](./skills/text-summarizer/SKILL.md) - Extractive AI text summarizer. Automatically extracts the most important sentences from any text using a hybrid TextRank + TF-IDF algorithm.
 
 </details>
 
