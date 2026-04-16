@@ -4,6 +4,16 @@ Agent Skills are a lightweight, open format for extending AI agent capabilities 
 
 At its core, a skill is a folder containing a `SKILL.md` file. This file includes metadata (`name` and `description`, at minimum) and instructions that tell an agent how to perform a specific task. Skills can also bundle scripts, templates, and reference materials.
 
+## Agent Skills Structure Directory
+
+```
+my-skill/
+├── SKILL.md          # Required: instructions + metadata
+├── scripts/          # Optional: executable code
+├── references/       # Optional: documentation
+└── assets/           # Optional: templates, resources
+```
+
 ## Agent Skills List
 
 <details open>
@@ -48,13 +58,12 @@ At its core, a skill is a folder containing a `SKILL.md` file. This file include
 
 </details>
 
+<details open>
+<summary><h3 style="display:inline">Marketing</h3></summary>
 
-## Agent Skills Structure Directory
+- [Auto Acquisition](./skills/auto-acquisition/SKILL.md) - Customer acquisition and marketing automation expert.
+- [Market Research Automation](./skills/market-research-automation/SKILL.md) - Market research automation skill. Mine user pain points from social media and analyze competitors. Applicable for market validation before product launch, user needs analysis, and competitor feature comparison.
+- [SEO Content Pipeline](./skills/seo-content-pipeline/SKILL.md) - SEO automated content pipeline skill. Automates the entire workflow from competitor research and keyword mining to article generation and publishing.
 
-```
-my-skill/
-├── SKILL.md          # Required: instructions + metadata
-├── scripts/          # Optional: executable code
-├── references/       # Optional: documentation
-└── assets/           # Optional: templates, resources
-```
+</details>
+
