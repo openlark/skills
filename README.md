@@ -37,6 +37,8 @@ my-skill/
 - [Text Summarizer](./skills/text-summarizer/SKILL.md) - Extractive AI text summarizer. Automatically extracts the most important sentences from any text using a hybrid TextRank + TF-IDF algorithm.
 
 - [Agent Daily Review](./skills/agent-daily-review/SKILL.md) - Helps agents conduct structured end-of-day review, reflection, and documentation. Provides capabilities to scan today's records, categorize activities, perform reflective analysis, and generate review reports. Supports Cron auto-trigger for cumulative growth with each run.
+- [Competitive Dimensions Analysis](./skills/competitive-dimensions-analysis/SKILL.md) - Conduct comprehensive competitor research through feature comparison matrices, product positioning analysis, differentiation strategy, and competitive impact assessment.
+
 
 </details>
 
