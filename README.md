@@ -39,6 +39,9 @@ my-skill/
 - [Agent Daily Review](./skills/agent-daily-review/SKILL.md) - Helps agents conduct structured end-of-day review, reflection, and documentation. Provides capabilities to scan today's records, categorize activities, perform reflective analysis, and generate review reports. Supports Cron auto-trigger for cumulative growth with each run.
 - [Competitive Dimensions Analysis](./skills/competitive-dimensions-analysis/SKILL.md) - Conduct comprehensive competitor research through feature comparison matrices, product positioning analysis, differentiation strategy, and competitive impact assessment.
 
+- [Skill Workflow Orchestrator](./skills/skill-workflow-orchestrator/SKILL.md) - Multi-skill workflow orchestrator. Chain multiple skills into automated pipelines, triggering entire sequences like "search → summarize → generate report → send email" with a single phrase. Supports conditional branching and error handling; serves as foundational infrastructure for building complex Agent workflows.
+
+- [Self Apply Pressure](./skills/self-apply-pressure/SKILL.md) - Multi-skill workflow orchestrator. Chain multiple skills into automated pipelines, triggering entire sequences like "search → summarize → generate report → send email" with a single phrase. Supports conditional branching and error handling; serves as foundational infrastructure for building complex Agent workflows.
 
 </details>
 
