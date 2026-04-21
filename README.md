@@ -50,7 +50,7 @@ my-skill/
 
 - [Idea Validator](./skills/idea-validator/SKILL.md) - Startup idea validation skill. Helps indie developers validate product ideas, analyze competitive landscapes, and assess market saturation.
 - [Xiaohongshu Insight](./skills/xiaohongshu-insight/SKILL.md) - Xiaohongshu viral content data insight tool. Continuously collects 2000+ viral posts daily across the platform, based on criteria: low-follower viral posts, periodic high-engagement posts, single-day interaction spikes, and sustained interaction growth. Use for: Xiaohongshu content creation, viral content analysis, data reference, traffic trend tracking, and creative inspiration.
-- [Wechat Article Generation Expert](./skills/wechat-article-generation-expert/SKILL.md) - Product Requirements Document (PRD) writing expert. Write structured product requirements documents, including problem statements, user stories, requirement prioritization, and success metrics. Applicable for feature specification writing, defining acceptance criteria, or documenting product decisions.
+- [Wechat Article Generation Expert](./skills/wechat-article-generation-expert/SKILL.md) - Automatically create complete WeChat Official Account articles (≥1600 words) based on topic, audience, and style, including title ideation, structural planning, content writing, and multimedia element planning.
 - [PRD Writing Expert](./skills/prd-writing-expert/SKILL.md) - Product Requirements Document (PRD) writing expert. Write structured product requirements documents, including problem statements, user stories, requirement prioritization, and success metrics. Applicable for feature specification writing, defining acceptance criteria, or documenting product decisions.
 
 
