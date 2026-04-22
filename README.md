@@ -42,6 +42,8 @@ my-skill/
 - [Skill Workflow Orchestrator](./skills/skill-workflow-orchestrator/SKILL.md) - Multi-skill workflow orchestrator. Chain multiple skills into automated pipelines, triggering entire sequences like "search → summarize → generate report → send email" with a single phrase. Supports conditional branching and error handling; serves as foundational infrastructure for building complex Agent workflows.
 
 - [Self Apply Pressure](./skills/self-apply-pressure/SKILL.md) - Multi-skill workflow orchestrator. Chain multiple skills into automated pipelines, triggering entire sequences like "search → summarize → generate report → send email" with a single phrase. Supports conditional branching and error handling; serves as foundational infrastructure for building complex Agent workflows.
+- [Context Relay](./skills/context-relay/SKILL.md) - Solves the memory fragmentation problem for Agents during session restarts, sub-agent boundaries, and cron/heartbeat isolation.
+- [Token Cost Optimization ](./skills/token-cost-optimization/SKILL.md) - Token savings and API cost optimization. Provides token calculator, three-tier optimization strategies (prompt compression / cache reuse / model downgrade), specific configuration guides, and quantified effect analysis.
 
 </details>
 
