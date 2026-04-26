@@ -37,18 +37,20 @@ my-skill/
 - [Text Summarizer](./skills/text-summarizer/SKILL.md) - Extractive AI text summarizer. Automatically extracts the most important sentences from any text using a hybrid TextRank + TF-IDF algorithm.
 - [AI Prompt Optimization](./skills/ai-prompt-optimization/SKILL.md) - Use when users need to optimize prompts for AI conversations, generate structured templates, create few-shot examples, design chain-of-thought guidance, or diagnose and improve existing prompts. Applicable to prompt optimization for various AI tools such as ChatGPT, Claude, Midjourney, etc.
 
+- [Agent Creation](./skills/agent-creation/SKILL.md) - Create a new OpenClaw agent with a workspace directory and SOUL.md configuration. Use when you need to create a new agent, set up an agent workspace, configure SOUL.md, or initialize agent memory structure.
 - [Agent Daily Review](./skills/agent-daily-review/SKILL.md) - Helps agents conduct structured end-of-day review, reflection, and documentation. Provides capabilities to scan today's records, categorize activities, perform reflective analysis, and generate review reports. Supports Cron auto-trigger for cumulative growth with each run.
+- [Agent Monitor](./skills/agent-monitor/SKILL.md) - Agent work status monitoring and automatic activation system. Triggers when monitoring subagent runtime status, detecting prolonged unresponsive "stalled" states, and automatically activating them to resume operation. Suitable for long-running task monitoring, automated operations, agent health checks, and similar scenarios.
+- [Agent Browser Assistant](./skills/agent-browser-assistant/SKILL.md) - For browser automation tasks, web data scraping, form filling, page screenshots, UI testing, and more.
+- [Multi-Agent Communication](./skills/multi-agent-communication/SKILL.md) - Based on two core tools, sessions_spawn and sessions_send, to help users build, manage, and optimize distributed Agent systems, enabling task decomposition, parallel processing, and efficient coordination among Agents.
+
 - [Competitive Dimensions Analysis](./skills/competitive-dimensions-analysis/SKILL.md) - Conduct comprehensive competitor research through feature comparison matrices, product positioning analysis, differentiation strategy, and competitive impact assessment.
 
 - [Skill Workflow Orchestrator](./skills/skill-workflow-orchestrator/SKILL.md) - Multi-skill workflow orchestrator. Chain multiple skills into automated pipelines, triggering entire sequences like "search → summarize → generate report → send email" with a single phrase. Supports conditional branching and error handling; serves as foundational infrastructure for building complex Agent workflows.
 - [Self Apply Pressure](./skills/self-apply-pressure/SKILL.md) - Multi-skill workflow orchestrator. Chain multiple skills into automated pipelines, triggering entire sequences like "search → summarize → generate report → send email" with a single phrase. Supports conditional branching and error handling; serves as foundational infrastructure for building complex Agent workflows.
 - [Context Relay](./skills/context-relay/SKILL.md) - Solves the memory fragmentation problem for Agents during session restarts, sub-agent boundaries, and cron/heartbeat isolation.
 - [Token Cost Optimization](./skills/token-cost-optimization/SKILL.md) - Token savings and API cost optimization. Provides token calculator, three-tier optimization strategies (prompt compression / cache reuse / model downgrade), specific configuration guides, and quantified effect analysis.
-- [Agent Monitor](./skills/agent-monitor/SKILL.md) - Agent work status monitoring and automatic activation system. Triggers when monitoring subagent runtime status, detecting prolonged unresponsive "stalled" states, and automatically activating them to resume operation. Suitable for long-running task monitoring, automated operations, agent health checks, and similar scenarios.
 - [Lightweight Team Orchestration](./skills/lightweight-team-orchestration/SKILL.md) - Lightweight multi-agent team orchestration. Output structure simplified to two folders: agents/ and projects/.
 - [Task Orchestrator](./skills/task-orchestrator/SKILL.md) - Intelligent task management and execution coordination officer. Automatically generates task lists, intelligently decomposes complex tasks, matches AI agents, makes priority decisions, and monitors progress.
-
-- [Financial Report Tracker](./skills/financial-report-tracker/SKILL.md) - Automatically track tech company financial reports and generate investment summaries. Supports retrieving earnings calendars, market expectation comparisons, key metric interpretation, and more.
 
 </details>
 
@@ -60,7 +62,6 @@ my-skill/
 - [Wechat Article Generation Expert](./skills/wechat-article-generation-expert/SKILL.md) - Automatically create complete WeChat Official Account articles (≥1600 words) based on topic, audience, and style, including title ideation, structural planning, content writing, and multimedia element planning.
 - [PRD Writing Expert](./skills/prd-writing-expert/SKILL.md) - Product Requirements Document (PRD) writing expert. Write structured product requirements documents, including problem statements, user stories, requirement prioritization, and success metrics. Applicable for feature specification writing, defining acceptance criteria, or documenting product decisions.
 - [WeChat Business Article Writer](./skills/wechat-business-article-writer/SKILL.md) - Create WeChat public account style business and technology articles with professional yet approachable tone. 
-
 
 </details>
 
@@ -77,6 +78,7 @@ my-skill/
 - [Auto Acquisition](./skills/auto-acquisition/SKILL.md) - Customer acquisition and marketing automation expert.
 - [Market Research Automation](./skills/market-research-automation/SKILL.md) - Market research automation skill. Mine user pain points from social media and analyze competitors. Applicable for market validation before product launch, user needs analysis, and competitor feature comparison.
 - [SEO Content Pipeline](./skills/seo-content-pipeline/SKILL.md) - SEO automated content pipeline skill. Automates the entire workflow from competitor research and keyword mining to article generation and publishing.
+- [Financial Report Tracker](./skills/financial-report-tracker/SKILL.md) - Automatically track tech company financial reports and generate investment summaries. Supports retrieving earnings calendars, market expectation comparisons, key metric interpretation, and more.
 
 </details>
 
@@ -87,10 +89,14 @@ my-skill/
 - [Microsoft MarkItDown](./skills/microsoft-markitdown/SKILL.md) - Use MarkItDown to convert various files (PDF, Word, Excel, PPT, images, audio, HTML, CSV, JSON, etc.) to Markdown format for LLM processing and text analysis. Also supports content extraction from ZIP archives, YouTube videos, and EPUB e-books.
 - [ECharts](./skills/apache-echarts/SKILL.md) - Apache ECharts charting skill.
 - [Chart.js](./skills/chartjs/SKILL.md) - Chart.js charting skill. Used to generate visual charts such as line charts, bar charts, pie charts, radar charts, scatter plots, etc.
-- [favicons](./skills/favicons/SKILL.md) - Use the favicons Node.js library to generate multi-platform website icons (Favicons).etc.
+- [Favicons](./skills/favicons/SKILL.md) - Use the favicons Node.js library to generate multi-platform website icons (Favicons).etc.
 
 - [Vercel CLI](./skills/vercel-cli/SKILL.md) - Vercel CLI skill for deploying and managing Vercel projects from the terminal.
 
 - [SQLite Client](./skills/sqlite-client/SKILL.md) - SQLite database operations. Use this skill when users need to create, read, query, or modify SQLite databases (.db files).
+
+- [VitePress Static Website Generator](./skills/vitepress-generator/SKILL.md) - Quickly generate static websites using VitePress. Supports installing dependencies, initializing projects, local preview, building, and deployment.
+
+- [Static Site Cloner](./skills/static-site-cloner/SKILL.md) - Static site reproduction expert - Analyze target websites and manually code their structure, visual style, and basic interactions using pure HTML/CSS/JavaScript.
 
 </details>
