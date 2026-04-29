@@ -54,7 +54,9 @@ my-skill/
 - [Task Orchestrator](./skills/task-orchestrator/SKILL.md) - Intelligent task management and execution coordination officer. Automatically generates task lists, intelligently decomposes complex tasks, matches AI agents, makes priority decisions, and monitors progress.
 
 - [Content Trend Analyzer](./skills/content-trend-analyzer/SKILL.md) - Cross-platform content trend analysis and outline generation tool. Platforms covered include but are not limited to: Google Trends, Reddit, YouTube, Medium, Substack, Twitter/X, Zhihu, Weibo, Douyin, Bilibili, Baidu Index, WeChat Official Accounts, GitHub Trending, Product Hunt.
+- [Deep Article Analysis](./skills/deep-article-analysis/SKILL.md) - Conduct in-depth analysis and interpretation of articles, extracting core viewpoints, key data, and deep insights.
 
+- [Windows WeChat MCP](./skills/windows-wechat-mcp/SKILL.md) - Windows WeChat message monitoring and sending. Achieved through window automation: screenshot, search contacts, send messages. Use when needing to send messages to WeChat contacts, check WeChat window status, or perform WeChat-related automation tasks.
 
 </details>
 
