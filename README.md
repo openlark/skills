@@ -110,4 +110,8 @@ my-skill/
 
 - [Mustache](./skills/mustache/SKILL.md) - Use mustache.js (logic-less Mustache templates) for any templating task in JavaScript/Node.js environments.
 
+- [HTML DOM To Image](./skills/dom-to-image/SKILL.md) - Convert HTML DOM nodes to images (PNG/JPEG/SVG/Blob). Supports rendering options such as filter, backgroundColor, quality, and pixelRatio.
+
+- [DOM Capture Engine](./skills/snapdom/SKILL.md) - Convert HTML DOM nodes to images (PNG/JPEG/SVG/Blob). Supports rendering options such as filter, backgroundColor, quality, and pixelRatio.
+
 </details>
