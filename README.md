@@ -25,6 +25,7 @@ my-skill/
 - [Xiaohongshu Keyword Collector](./skills/xiaohongshu-keyword-collector/SKILL.md) - Automatically accesses Xiaohongshu's Explore page via browser automation, inputs keywords into the search bar, and collects the list of related keywords from the auto-suggest dropdown.
 - [Xiaohongshu Automatic Image-Text Post Publishing](./skills/xiaohongshu-image-auto/SKILL.md) - After users provide a title and body text, automatically completes the entire process: login detection, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 - [Xiaohongshu Automatic Long-Form Post Publishing](./skills/xiaohongshu-longpost-auto/SKILL.md) - When users have long-form content ready to publish on Xiaohongshu, automatically completes the entire process: login detection, long content segmentation optimization, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
+- [WeChat Official Account Article Auto-Publisher](./skills/wechat-mp-article-publisher/SKILL.md) - Complete the creation, editing, and publishing of WeChat Official Account articles through browser automation simulating manual operation. No API key required; operates directly on the Official Account platform backend.
 
 - [Humanizer AI](./skills/humanizer-ai/SKILL.md) - Identify and eliminate traces of AI-generated text, making writing sound more natural and human.
 - [Detector AI](./skills/detector-ai/SKILL.md) - AI Detection Tool - Detect AI-generated text with multiple analysis methods including perplexity analysis, burstiness detection, readability scoring, and AI fingerprint detection. 
@@ -118,6 +119,8 @@ my-skill/
 - [DOM Capture Engine](./skills/snapdom/SKILL.md) - Convert HTML DOM nodes to images (PNG/JPEG/SVG/Blob). Supports rendering options such as filter, backgroundColor, quality, and pixelRatio.
 
 - [Social Media Cover Image Generator](./skills/social-media-cover-generator/SKILL.md) - Social media cover image generator. Generates HTML pages based on title content and automatically converts them to PNG images, suitable for creating cover images and graphics for platforms such as Xiaohongshu, WeChat Official Accounts, Weibo, Douyin, Bilibili, Zhihu, Twitter/X, Instagram, and LinkedIn.
+
+- [LEGO Pixel Art Generator](./skills/lego-pixel-art/SKILL.md) - Convert any image into LEGO brick pixel art, generating a complete building plan and material purchase list. Built-in standard LEGO color system, supports custom sizes (10-200 studs) and color precision adjustment, outputs a row-by-row building guide. Pure frontend implementation, zero dependencies, ready to use out of the box. Suitable for LEGO enthusiasts, craft creators, and educators.
 
 
 </details>
