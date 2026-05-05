@@ -63,6 +63,8 @@ my-skill/
 
 - [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision."
 
+- [Tarot Card Reader](./skills/tarot-card-reader/SKILL.md) - Based on a complete tarot knowledge base and systematic interpretation guide, provides accurate readings for various classic spreads along with comprehensive advice, helping seekers engage in self-exploration, gain inspiration, and receive directional guidance through tarot cards.
+
 
 </details>
 
@@ -129,6 +131,8 @@ my-skill/
 - [LEGO Pixel Art Generator](./skills/lego-pixel-art/SKILL.md) - Convert any image into LEGO brick pixel art, generating a complete building plan and material purchase list. Built-in standard LEGO color system, supports custom sizes (10-200 studs) and color precision adjustment, outputs a row-by-row building guide. Pure frontend implementation, zero dependencies, ready to use out of the box. Suitable for LEGO enthusiasts, craft creators, and educators.
 
 - [Mermaid Diagram Generation](./skills/mermaid-chart/SKILL.md) - Generate various diagrams using Mermaid syntax (flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, pie charts, ER diagrams, mind maps, timelines, C4 architecture diagrams, user journey maps, Git graphs, Sankey diagrams, quadrant charts, etc.). Supports inline rendering in Markdown.
+
+- [Tesseract OCR Image Text Extraction](./skills/tesseract-image-ocr/SKILL.md) - Extract text from images using Tesseract.js (OCR). Supports multi-language recognition including Chinese and English, region recognition, character whitelist filtering, text orientation detection, and can run in a Node.js environment.
 
 
 </details>
