@@ -114,6 +114,8 @@ my-skill/
 
 - [ZX](./skills/zx/SKILL.md) - Comprehensive guide for writing shell scripts with Google zx — a tool for writing better scripts using JavaScript/TypeScript. Use when writing, debugging, or refactoring zx scripts (.mjs, .js, .ts files using zx), executing shell commands from JavaScript, working with ProcessPromise/ProcessOutput APIs, piping streams, configuring zx options, or using zx CLI.  Do NOT use for general Node.js questions unrelated to shell scripting.
 
+- [@clack/prompts](./skills/clack-prompts/SKILL.md) - Build beautiful interactive Node.js command-line apps with @clack/prompts. Use when building CLI apps, wizards, setup scripts, or any interactive terminal prompt flow in Node.js. Covers text input, password, confirm, select, autocomplete, multiselect, spinner, progress bars, grouped prompts, task runners, and styled logging.
+
 - [Google Web Fonts](./skills/google-web-fonts/SKILL.md) - Use the Google Fonts API to add fonts to web pages.
 
 - [VitePress Static Website Generator](./skills/vitepress-generator/SKILL.md) - Quickly generate static websites using VitePress. Supports installing dependencies, initializing projects, local preview, building, and deployment.
@@ -133,6 +135,8 @@ my-skill/
 - [Mermaid Diagram Generation](./skills/mermaid-chart/SKILL.md) - Generate various diagrams using Mermaid syntax (flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, pie charts, ER diagrams, mind maps, timelines, C4 architecture diagrams, user journey maps, Git graphs, Sankey diagrams, quadrant charts, etc.). Supports inline rendering in Markdown.
 
 - [Tesseract OCR Image Text Extraction](./skills/tesseract-image-ocr/SKILL.md) - Extract text from images using Tesseract.js (OCR). Supports multi-language recognition including Chinese and English, region recognition, character whitelist filtering, text orientation detection, and can run in a Node.js environment.
+
+- [Node Cron](./skills/node-cron/SKILL.md) - Node.js cron job scheduling with the `cron` npm package. Use when the user needs to schedule recurring tasks, create cron jobs, validate cron expressions, set up timed callbacks, or work with cron syntax in a Node.js/TypeScript project. 
 
 
 </details>
