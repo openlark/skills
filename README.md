@@ -138,5 +138,9 @@ my-skill/
 
 - [Node Cron](./skills/node-cron/SKILL.md) - Node.js cron job scheduling with the `cron` npm package. Use when the user needs to schedule recurring tasks, create cron jobs, validate cron expressions, set up timed callbacks, or work with cron syntax in a Node.js/TypeScript project. 
 
+- [Archiver — Streaming Archive Packaging](./skills/archiver/SKILL.md) - Use the Archiver library for streaming archive packaging in Node.js. Supports creating ZIP/TAR archives, appending content from streams, strings, buffers, file paths, directories, and glob patterns, as well as registering custom formats. 
+
+- [Archiver — Streaming Archive Packaging](./skills/webtorrent/SKILL.md) - Use WebTorrent to implement streaming BitTorrent client functionality in Node.js and the browser. Supports torrent downloading, seeding, magnet links, streaming media playback, and peer-to-peer transfer (via WebRTC Data Channel in the browser, and TCP/UDP in Node.js). 
+
 
 </details>
