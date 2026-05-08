@@ -142,5 +142,8 @@ my-skill/
 
 - [Archiver — Streaming Archive Packaging](./skills/webtorrent/SKILL.md) - Use WebTorrent to implement streaming BitTorrent client functionality in Node.js and the browser. Supports torrent downloading, seeding, magnet links, streaming media playback, and peer-to-peer transfer (via WebRTC Data Channel in the browser, and TCP/UDP in Node.js). 
 
+- [Fully Automated Collaborative Code Development Pipeline](./skills/auto-collaboration-dev-pipeline/SKILL.md) - Fully automated collaborative code development pipeline for complex code development tasks. Must be used when users request code development, program writing, feature implementation, or have code quality requirements.
+
+- [Macaron Card Generator](./skills/macaron-card-generator/SKILL.md) - Generate beautiful macaron-color cartoon illustration-style card images from text content. Supports various types such as book recommendation cards, concept cards, quote cards, and comparison cards, with multiple aspect ratios including 3:4, 9:16, and 1:1.
 
 </details>
