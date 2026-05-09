@@ -45,6 +45,8 @@ my-skill/
 - [Multi-Agent Communication](./skills/multi-agent-communication/SKILL.md) - Based on two core tools, sessions_spawn and sessions_send, to help users build, manage, and optimize distributed Agent systems, enabling task decomposition, parallel processing, and efficient coordination among Agents.
 - [Multi-Agent Collaboration Communication](./skills/multi-agent-collaboration-communication/SKILL.md) - Focused on multi-agent collaboration and communication scenarios, helping users build and manage complex distributed agent systems to achieve task decomposition, parallel processing, and collaborative work. Use this skill when users need to design multi-agent system architectures, plan task distribution schemes, establish inter-agent communication protocols, or implement distributed collaboration workflows.
 
+- [OpenClaw 7x24 Watchdog & Auto-Healer](./skills/guardian-auto-healer/SKILL.md) - OpenClaw 7x24 watchdog & auto-healer. Monitors gateway health, memory usage, zombie sessions, and disk space every 5 minutes with automatic restart when stuck.
+
 - [Competitive Dimensions Analysis](./skills/competitive-dimensions-analysis/SKILL.md) - Conduct comprehensive competitor research through feature comparison matrices, product positioning analysis, differentiation strategy, and competitive impact assessment.
 
 - [Marketing Psychology Expert](./skills/marketing-psychology-expert/SKILL.md) - Helps deeply understand consumer psychology and behavioral patterns based on psychological principles, providing strategic guidance on price anchoring, scarcity effect, social proof, reciprocity principle, loss aversion, framing effect, and more.
@@ -62,8 +64,6 @@ my-skill/
 - [Windows WeChat MCP](./skills/windows-wechat-mcp/SKILL.md) - Windows WeChat message monitoring and sending. Achieved through window automation: screenshot, search contacts, send messages. Use when needing to send messages to WeChat contacts, check WeChat window status, or perform WeChat-related automation tasks.
 
 - [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision."
-
-- [Tarot Card Reader](./skills/tarot-card-reader/SKILL.md) - Based on a complete tarot knowledge base and systematic interpretation guide, provides accurate readings for various classic spreads along with comprehensive advice, helping seekers engage in self-exploration, gain inspiration, and receive directional guidance through tarot cards.
 
 
 </details>
@@ -128,6 +128,8 @@ my-skill/
 
 - [DOM Capture Engine](./skills/snapdom/SKILL.md) - Convert HTML DOM nodes to images (PNG/JPEG/SVG/Blob). Supports rendering options such as filter, backgroundColor, quality, and pixelRatio.
 
+- [Gray Matter](./skills/gray-matter/SKILL.md) - Parse YAML/JSON/TOML front-matter from strings or files using the gray-matter library.
+
 - [Social Media Cover Image Generator](./skills/social-media-cover-generator/SKILL.md) - Social media cover image generator. Generates HTML pages based on title content and automatically converts them to PNG images, suitable for creating cover images and graphics for platforms such as Xiaohongshu, WeChat Official Accounts, Weibo, Douyin, Bilibili, Zhihu, Twitter/X, Instagram, and LinkedIn.
 
 - [LEGO Pixel Art Generator](./skills/lego-pixel-art/SKILL.md) - Convert any image into LEGO brick pixel art, generating a complete building plan and material purchase list. Built-in standard LEGO color system, supports custom sizes (10-200 studs) and color precision adjustment, outputs a row-by-row building guide. Pure frontend implementation, zero dependencies, ready to use out of the box. Suitable for LEGO enthusiasts, craft creators, and educators.
@@ -145,5 +147,7 @@ my-skill/
 - [Fully Automated Collaborative Code Development Pipeline](./skills/auto-collaboration-dev-pipeline/SKILL.md) - Fully automated collaborative code development pipeline for complex code development tasks. Must be used when users request code development, program writing, feature implementation, or have code quality requirements.
 
 - [Macaron Card Generator](./skills/macaron-card-generator/SKILL.md) - Generate beautiful macaron-color cartoon illustration-style card images from text content. Supports various types such as book recommendation cards, concept cards, quote cards, and comparison cards, with multiple aspect ratios including 3:4, 9:16, and 1:1.
+
+- [Tarot Card Reader](./skills/tarot-card-reader/SKILL.md) - Based on a complete tarot knowledge base and systematic interpretation guide, provides accurate readings for various classic spreads along with comprehensive advice, helping seekers engage in self-exploration, gain inspiration, and receive directional guidance through tarot cards.
 
 </details>
