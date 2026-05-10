@@ -26,6 +26,7 @@ my-skill/
 - [Xiaohongshu Automatic Image-Text Post Publishing](./skills/xiaohongshu-image-auto/SKILL.md) - After users provide a title and body text, automatically completes the entire process: login detection, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 - [Xiaohongshu Automatic Long-Form Post Publishing](./skills/xiaohongshu-longpost-auto/SKILL.md) - When users have long-form content ready to publish on Xiaohongshu, automatically completes the entire process: login detection, long content segmentation optimization, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 - [WeChat Official Account Article Auto-Publisher](./skills/wechat-mp-article-publisher/SKILL.md) - Complete the creation, editing, and publishing of WeChat Official Account articles through browser automation simulating manual operation. No API key required; operates directly on the Official Account platform backend.
+- [Social Media Automation Operations Assistant](./skills/social-auto-publisher/SKILL.md) - Social media automation operations assistant. Automatically generate and publish content for Xiaohongshu, Weibo, and Twitter, with scheduled posting and interactive replies. Covers the full chain from content creation → AI illustration → scheduled publishing → interaction monitoring → data review.
 
 - [Humanizer AI](./skills/humanizer-ai/SKILL.md) - Identify and eliminate traces of AI-generated text, making writing sound more natural and human.
 - [Detector AI](./skills/detector-ai/SKILL.md) - AI Detection Tool - Detect AI-generated text with multiple analysis methods including perplexity analysis, burstiness detection, readability scoring, and AI fingerprint detection. 
@@ -86,6 +87,13 @@ my-skill/
 <summary><h3 style="display:inline">Data & APIs</h3></summary>
 
 - [News Express](./skills/news-express/SKILL.md) - Use this skill when users ask for news updates, daily briefings, or what's happening in the world. Fetches news from reliable international and Chinese RSS feeds. No API key required.
+
+</details>
+
+<details open>
+<summary><h3 style="display:inline">Security</h3></summary>
+
+- [Code and System Security Review](./skills/code-security-review/SKILL.md) - Report only real risks, not manufactured panic. Covers injection, XSS, path traversal, insecure deserialization, authentication and authorization flaws, key leaks, insecure logging, command execution, and other common vulnerabilities.
 
 </details>
 
