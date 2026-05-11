@@ -103,6 +103,7 @@ my-skill/
 - [Auto Acquisition](./skills/auto-acquisition/SKILL.md) - Customer acquisition and marketing automation expert.
 - [Market Research Automation](./skills/market-research-automation/SKILL.md) - Market research automation skill. Mine user pain points from social media and analyze competitors. Applicable for market validation before product launch, user needs analysis, and competitor feature comparison.
 - [SEO Content Pipeline](./skills/seo-content-pipeline/SKILL.md) - SEO automated content pipeline skill. Automates the entire workflow from competitor research and keyword mining to article generation and publishing.
+- [AI Citation Strategist](./skills/ai-citation-strategist/SKILL.md) - AI Recommendation Engine Optimization (AEO/GEO) expert. Audit brand visibility on platforms such as ChatGPT, Claude, Gemini, and Perplexity. Analyze why competitors are cited and provide content optimization strategies to improve AI citation rates.
 - [Financial Report Tracker](./skills/financial-report-tracker/SKILL.md) - Automatically track tech company financial reports and generate investment summaries. Supports retrieving earnings calendars, market expectation comparisons, key metric interpretation, and more.
 
 </details>
@@ -147,6 +148,8 @@ my-skill/
 - [Tesseract OCR Image Text Extraction](./skills/tesseract-image-ocr/SKILL.md) - Extract text from images using Tesseract.js (OCR). Supports multi-language recognition including Chinese and English, region recognition, character whitelist filtering, text orientation detection, and can run in a Node.js environment.
 
 - [Node Cron](./skills/node-cron/SKILL.md) - Node.js cron job scheduling with the `cron` npm package. Use when the user needs to schedule recurring tasks, create cron jobs, validate cron expressions, set up timed callbacks, or work with cron syntax in a Node.js/TypeScript project. 
+
+- [ImapFlow](./skills/imapflow/SKILL.md) - Modern Node.js IMAP client library (imapflow) for email integration.Covers authentication, mailbox locking, streaming fetches, async iterators, reconnection strategies, proxy support, and provider-specific configs (Gmail, Outlook, Yahoo, etc.).
 
 - [Archiver — Streaming Archive Packaging](./skills/archiver/SKILL.md) - Use the Archiver library for streaming archive packaging in Node.js. Supports creating ZIP/TAR archives, appending content from streams, strings, buffers, file paths, directories, and glob patterns, as well as registering custom formats. 
 
