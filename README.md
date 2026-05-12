@@ -161,4 +161,6 @@ my-skill/
 
 - [Tarot Card Reader](./skills/tarot-card-reader/SKILL.md) - Based on a complete tarot knowledge base and systematic interpretation guide, provides accurate readings for various classic spreads along with comprehensive advice, helping seekers engage in self-exploration, gain inspiration, and receive directional guidance through tarot cards.
 
+- [Crawl4AI Web Crawler](./skills/crawl4ai-web-crawler/SKILL.md) - Use Crawl4AI for web scraping and content extraction. Use when users need to scrape web content, extract structured data, convert web pages to Markdown, perform batch crawling, or use AI-driven web data collection.
+
 </details>
