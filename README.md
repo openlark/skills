@@ -163,4 +163,6 @@ my-skill/
 
 - [Crawl4AI Web Crawler](./skills/crawl4ai-web-crawler/SKILL.md) - Use Crawl4AI for web scraping and content extraction. Use when users need to scrape web content, extract structured data, convert web pages to Markdown, perform batch crawling, or use AI-driven web data collection.
 
+- [Open RAGFlow](./skills/open-ragflow/SKILL.md) - Open-source RAG engine fusing RAG with Agent capabilities. Full-stack: Python backend (Flask), React/TypeScript frontend, Docker-deployed microservices.
+
 </details>
