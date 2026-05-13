@@ -105,6 +105,7 @@ my-skill/
 - [SEO Content Pipeline](./skills/seo-content-pipeline/SKILL.md) - SEO automated content pipeline skill. Automates the entire workflow from competitor research and keyword mining to article generation and publishing.
 - [AI Citation Strategist](./skills/ai-citation-strategist/SKILL.md) - AI Recommendation Engine Optimization (AEO/GEO) expert. Audit brand visibility on platforms such as ChatGPT, Claude, Gemini, and Perplexity. Analyze why competitors are cited and provide content optimization strategies to improve AI citation rates.
 - [Financial Report Tracker](./skills/financial-report-tracker/SKILL.md) - Automatically track tech company financial reports and generate investment summaries. Supports retrieving earnings calendars, market expectation comparisons, key metric interpretation, and more.
+- [Data Analysis Report Generator](./skills/data-analysis-report-generator/SKILL.md) - Intelligent data analysis report generator. Auto-identifies Excel/CSV data structure (dimensions, metrics, timelines), performs multi-dimensional parallel analysis, and generates professional HTML reports with ECharts interactive charts. 
 
 </details>
 
@@ -153,7 +154,9 @@ my-skill/
 
 - [Archiver — Streaming Archive Packaging](./skills/archiver/SKILL.md) - Use the Archiver library for streaming archive packaging in Node.js. Supports creating ZIP/TAR archives, appending content from streams, strings, buffers, file paths, directories, and glob patterns, as well as registering custom formats. 
 
-- [Archiver — Streaming Archive Packaging](./skills/webtorrent/SKILL.md) - Use WebTorrent to implement streaming BitTorrent client functionality in Node.js and the browser. Supports torrent downloading, seeding, magnet links, streaming media playback, and peer-to-peer transfer (via WebRTC Data Channel in the browser, and TCP/UDP in Node.js). 
+- [WebTorrent — Streaming Torrent Client](./skills/webtorrent/SKILL.md) - Use WebTorrent to implement streaming BitTorrent client functionality in Node.js and the browser. Supports torrent downloading, seeding, magnet links, streaming media playback, and peer-to-peer transfer (via WebRTC Data Channel in the browser, and TCP/UDP in Node.js). 
+
+- [dotenv — Node.js Environment Variable Loader](./skills/dotenv/SKILL.md) - Use dotenv to manage environment variables for Node.js projects.
 
 - [Fully Automated Collaborative Code Development Pipeline](./skills/auto-collaboration-dev-pipeline/SKILL.md) - Fully automated collaborative code development pipeline for complex code development tasks. Must be used when users request code development, program writing, feature implementation, or have code quality requirements.
 
@@ -164,5 +167,4 @@ my-skill/
 - [Crawl4AI Web Crawler](./skills/crawl4ai-web-crawler/SKILL.md) - Use Crawl4AI for web scraping and content extraction. Use when users need to scrape web content, extract structured data, convert web pages to Markdown, perform batch crawling, or use AI-driven web data collection.
 
 - [Open RAGFlow](./skills/open-ragflow/SKILL.md) - Open-source RAG engine fusing RAG with Agent capabilities. Full-stack: Python backend (Flask), React/TypeScript frontend, Docker-deployed microservices.
-
 </details>
