@@ -26,6 +26,7 @@ my-skill/
 - [Xiaohongshu Automatic Image-Text Post Publishing](./skills/xiaohongshu-image-auto/SKILL.md) - After users provide a title and body text, automatically completes the entire process: login detection, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 - [Xiaohongshu Automatic Long-Form Post Publishing](./skills/xiaohongshu-longpost-auto/SKILL.md) - When users have long-form content ready to publish on Xiaohongshu, automatically completes the entire process: login detection, long content segmentation optimization, AI-generated images, content filling, AI-generated tags, tag activation, original content declaration, and publishing.
 - [WeChat Official Account Article Auto-Publisher](./skills/wechat-mp-article-publisher/SKILL.md) - Complete the creation, editing, and publishing of WeChat Official Account articles through browser automation simulating manual operation. No API key required; operates directly on the Official Account platform backend.
+
 - [Social Media Automation Operations Assistant](./skills/social-auto-publisher/SKILL.md) - Social media automation operations assistant. Automatically generate and publish content for Xiaohongshu, Weibo, and Twitter, with scheduled posting and interactive replies. Covers the full chain from content creation → AI illustration → scheduled publishing → interaction monitoring → data review.
 
 - [Humanizer AI](./skills/humanizer-ai/SKILL.md) - Identify and eliminate traces of AI-generated text, making writing sound more natural and human.
@@ -106,6 +107,7 @@ my-skill/
 - [AI Citation Strategist](./skills/ai-citation-strategist/SKILL.md) - AI Recommendation Engine Optimization (AEO/GEO) expert. Audit brand visibility on platforms such as ChatGPT, Claude, Gemini, and Perplexity. Analyze why competitors are cited and provide content optimization strategies to improve AI citation rates.
 - [Financial Report Tracker](./skills/financial-report-tracker/SKILL.md) - Automatically track tech company financial reports and generate investment summaries. Supports retrieving earnings calendars, market expectation comparisons, key metric interpretation, and more.
 - [Data Analysis Report Generator](./skills/data-analysis-report-generator/SKILL.md) - Intelligent data analysis report generator. Auto-identifies Excel/CSV data structure (dimensions, metrics, timelines), performs multi-dimensional parallel analysis, and generates professional HTML reports with ECharts interactive charts. 
+- [Full-Link Data Analysis](./skills/full-link-data-analysis/SKILL.md) - Full-Link Data Analysis Engine: From business议题 to analytical report with complete seven-layer architecture. Built-in 15 analysis methods, supports data-aware routing (议题 semantics + data structure + problem type three dimensions), built-in quality assurance, outputs Feishu doc format analytical reports.
 
 </details>
 
@@ -167,4 +169,7 @@ my-skill/
 - [Crawl4AI Web Crawler](./skills/crawl4ai-web-crawler/SKILL.md) - Use Crawl4AI for web scraping and content extraction. Use when users need to scrape web content, extract structured data, convert web pages to Markdown, perform batch crawling, or use AI-driven web data collection.
 
 - [Open RAGFlow](./skills/open-ragflow/SKILL.md) - Open-source RAG engine fusing RAG with Agent capabilities. Full-stack: Python backend (Flask), React/TypeScript frontend, Docker-deployed microservices.
+
+- [Web Push Notifications](./skills/web-push/SKILL.md) - Send Web Push notifications from a Node.js backend using the web-push npm library (VAPID authentication, payload encryption). Covers generating VAPID keys, subscribing browsers, sending notifications, CLI usage, browser compatibility, and common pitfalls. 
+
 </details>
