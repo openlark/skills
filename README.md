@@ -65,7 +65,7 @@ my-skill/
 
 - [Windows WeChat MCP](./skills/windows-wechat-mcp/SKILL.md) - Windows WeChat message monitoring and sending. Achieved through window automation: screenshot, search contacts, send messages. Use when needing to send messages to WeChat contacts, check WeChat window status, or perform WeChat-related automation tasks.
 
-- [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision."
+- [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision"
 
 
 </details>
@@ -170,6 +170,10 @@ my-skill/
 
 - [Open RAGFlow](./skills/open-ragflow/SKILL.md) - Open-source RAG engine fusing RAG with Agent capabilities. Full-stack: Python backend (Flask), React/TypeScript frontend, Docker-deployed microservices.
 
-- [Web Push Notifications](./skills/web-push/SKILL.md) - Send Web Push notifications from a Node.js backend using the web-push npm library (VAPID authentication, payload encryption). Covers generating VAPID keys, subscribing browsers, sending notifications, CLI usage, browser compatibility, and common pitfalls. 
+- [Web Push Notifications](./skills/web-push/SKILL.md) - Send Web Push notifications from a Node.js backend using the web-push npm library (VAPID authentication, payload encryption). Covers generating VAPID keys, subscribing browsers, sending notifications, CLI usage, browser compatibility, and common pitfalls.
+
+- [markdown-it](./skills/markdown-it/SKILL.md) - Use markdown-it to render Markdown to HTML, configure plugins, custom rendering rules, syntax highlighting.
+
+- [minimatch](./skills/minimatch/SKILL.md) - Use minimatch (glob pattern matching library) for file path matching, such as *.js, **/*.ts and other glob patterns. Note: Do NOT use user input as pattern source to prevent ReDoS attacks.
 
 </details>
