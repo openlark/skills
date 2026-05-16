@@ -176,4 +176,8 @@ my-skill/
 
 - [minimatch](./skills/minimatch/SKILL.md) - Use minimatch (glob pattern matching library) for file path matching, such as *.js, **/*.ts and other glob patterns. Note: Do NOT use user input as pattern source to prevent ReDoS attacks.
 
+- [undici](./skills/undici/SKILL.md) - Use undici for HTTP requests, fetch, connection pooling, proxies, Mock testing, interceptors, caching. Note that undici's fetch differs from built-in fetch (no CORS, must consume body).
+
+- [undici](./skills/agent-base/SKILL.md) - Create custom http.Agent.
+
 </details>
