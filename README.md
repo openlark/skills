@@ -67,6 +67,7 @@ my-skill/
 
 - [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision"
 
+- [Skill Distiller](./skills/skill-distiller/SKILL.md) - Skill Distiller. Triggered when users encounter repetitive problems, need to systematize a solution in a certain domain, or want to solidify someone's methodology into a reusable operational process.
 
 </details>
 
@@ -178,6 +179,8 @@ my-skill/
 
 - [undici](./skills/undici/SKILL.md) - Use undici for HTTP requests, fetch, connection pooling, proxies, Mock testing, interceptors, caching. Note that undici's fetch differs from built-in fetch (no CORS, must consume body).
 
-- [undici](./skills/agent-base/SKILL.md) - Create custom http.Agent.
+- [agent-base](./skills/agent-base/SKILL.md) - Create custom http.Agent.
+
+- [fish-speech](./skills/fish-speech/SKILL.md) - Fish Audio S2 Pro TTS.
 
 </details>
