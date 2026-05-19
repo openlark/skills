@@ -57,6 +57,7 @@ my-skill/
 - [Windows WeChat MCP](./skills/windows-wechat-mcp/SKILL.md) - Windows WeChat message monitoring and sending. Achieved through window automation: screenshot, search contacts, send messages. Use when needing to send messages to WeChat contacts, check WeChat window status, or perform WeChat-related automation tasks.
 - [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision"
 - [Skill Distiller](./skills/skill-distiller/SKILL.md) - Skill Distiller. Triggered when users encounter repetitive problems, need to systematize a solution in a certain domain, or want to solidify someone's methodology into a reusable operational process.
+- [VS Code Copilot Custom Agent Creator ](./skills/vscode-agents-creator/SKILL.md) - Create VS Code Copilot custom Agent (.agent.md) files.
 
 </details>
 
@@ -69,7 +70,6 @@ my-skill/
 - [PRD Writing Expert](./skills/prd-writing-expert/SKILL.md) - Product Requirements Document (PRD) writing expert. Write structured product requirements documents, including problem statements, user stories, requirement prioritization, and success metrics. Applicable for feature specification writing, defining acceptance criteria, or documenting product decisions.
 - [WeChat Business Article Writer](./skills/wechat-business-article-writer/SKILL.md) - Create WeChat public account style business and technology articles with professional yet approachable tone. 
 - [Batch Content Factory ](./skills/batch-content-factory/SKILL.md) - Multi-platform content production line. Automates the entire workflow from topic research to content creation. Suitable for self-media operators producing high-quality content in bulk, content team collaboration, and brand content matrix management.
-
 
 </details>
 
@@ -136,6 +136,7 @@ my-skill/
 - [Web Push Notifications](./skills/web-push/SKILL.md) - Send Web Push notifications from a Node.js backend using the web-push npm library (VAPID authentication, payload encryption). Covers generating VAPID keys, subscribing browsers, sending notifications, CLI usage, browser compatibility, and common pitfalls.
 - [markdown-it](./skills/markdown-it/SKILL.md) - Use markdown-it to render Markdown to HTML, configure plugins, custom rendering rules, syntax highlighting.
 - [minimatch](./skills/minimatch/SKILL.md) - Use minimatch (glob pattern matching library) for file path matching, such as *.js, **/*.ts and other glob patterns. Note: Do NOT use user input as pattern source to prevent ReDoS attacks.
+- [picomatch](./skills/picomatch/SKILL.md) - Picomatch — A fast and accurate glob pattern matching library.
 - [undici](./skills/undici/SKILL.md) - Use undici for HTTP requests, fetch, connection pooling, proxies, Mock testing, interceptors, caching. Note that undici's fetch differs from built-in fetch (no CORS, must consume body).
 - [agent-base](./skills/agent-base/SKILL.md) - Create custom http.Agent.
 - [fish-speech](./skills/fish-speech/SKILL.md) - Fish Audio S2 Pro TTS.
