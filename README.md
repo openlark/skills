@@ -69,7 +69,8 @@ my-skill/
 - [Wechat Article Generation Expert](./skills/wechat-article-generation-expert/SKILL.md) - Automatically create complete WeChat Official Account articles (≥1600 words) based on topic, audience, and style, including title ideation, structural planning, content writing, and multimedia element planning.
 - [PRD Writing Expert](./skills/prd-writing-expert/SKILL.md) - Product Requirements Document (PRD) writing expert. Write structured product requirements documents, including problem statements, user stories, requirement prioritization, and success metrics. Applicable for feature specification writing, defining acceptance criteria, or documenting product decisions.
 - [WeChat Business Article Writer](./skills/wechat-business-article-writer/SKILL.md) - Create WeChat public account style business and technology articles with professional yet approachable tone. 
-- [Batch Content Factory ](./skills/batch-content-factory/SKILL.md) - Multi-platform content production line. Automates the entire workflow from topic research to content creation. Suitable for self-media operators producing high-quality content in bulk, content team collaboration, and brand content matrix management.
+- [Batch Content Factory](./skills/batch-content-factory/SKILL.md) - Multi-platform content production line. Automates the entire workflow from topic research to content creation. Suitable for self-media operators producing high-quality content in bulk, content team collaboration, and brand content matrix management.
+- [Anime Storyboard Prompt Generation](./skills/storyboard-prompt-generator/SKILL.md) - Parse anime storyboard scripts and generate four types of prompts: character prompts, scene prompts, Sora video generation prompts, and standard storyboard prompts.
 
 </details>
 
@@ -142,5 +143,6 @@ my-skill/
 - [fish-speech](./skills/fish-speech/SKILL.md) - Fish Audio S2 Pro TTS.
 - [ink](./skills/ink-tui/SKILL.md) - Ink — React for interactive command-line apps. Build rich terminal UIs with React components. 
 - [Commander.js](./skills/commander/SKILL.md) - Commander.js is the most popular command-line interface (CLI) framework for Node.js.
+- [TanStack Libraries](./skills/tanstack-libraries/SKILL.md) - Use when users ask about TanStack libraries, TanStack Start/Router/Query/Table/Form/Virtual/Store/DB/Pacer/Config/DevTools/CLI/Intent/Hotkeys/AI usage, package names, framework adapters, maturity status, documentation URLs, installation methods, core APIs, code examples.
 
 </details>
