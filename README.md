@@ -144,5 +144,8 @@ my-skill/
 - [ink](./skills/ink-tui/SKILL.md) - Ink — React for interactive command-line apps. Build rich terminal UIs with React components. 
 - [Commander.js](./skills/commander/SKILL.md) - Commander.js is the most popular command-line interface (CLI) framework for Node.js.
 - [TanStack Libraries](./skills/tanstack-libraries/SKILL.md) - Use when users ask about TanStack libraries, TanStack Start/Router/Query/Table/Form/Virtual/Store/DB/Pacer/Config/DevTools/CLI/Intent/Hotkeys/AI usage, package names, framework adapters, maturity status, documentation URLs, installation methods, core APIs, code examples.
+- [Claude Code Agent SDK](./skills/claude-code-agent-sdk/SKILL.md) - Claude Agent SDK documentation — build production AI agents with Claude Code as a library in Python or TypeScript. Use when building, configuring, or debugging agents with the Claude Agent SDK.
+- [Google MediaPipe](./skills/mediapipe/SKILL.md) - on-device ML pipeline framework for vision, text, audio, and LLM inference. Cross-platform deployment to Android, iOS, web, desktop, edge devices, and IoT. 
+
 
 </details>
