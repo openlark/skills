@@ -115,6 +115,7 @@ my-skill/
 - [@clack/prompts](./skills/clack-prompts/SKILL.md) - Build beautiful interactive Node.js command-line apps with @clack/prompts. Use when building CLI apps, wizards, setup scripts, or any interactive terminal prompt flow in Node.js. Covers text input, password, confirm, select, autocomplete, multiselect, spinner, progress bars, grouped prompts, task runners, and styled logging.
 - [Google Web Fonts](./skills/google-web-fonts/SKILL.md) - Use the Google Fonts API to add fonts to web pages.
 - [VitePress Static Website Generator](./skills/vitepress-generator/SKILL.md) - Quickly generate static websites using VitePress. Supports installing dependencies, initializing projects, local preview, building, and deployment.
+- [Clone Website](./skills/clone-website/SKILL.md) - Clone, copy, rebuild, or reverse engineer any website. Use when users request to clone a website, copy a page, replicate a webpage, or recreate one from scratch.
 - [Static Site Cloner](./skills/static-site-cloner/SKILL.md) - Static site reproduction expert - Analyze target websites and manually code their structure, visual style, and basic interactions using pure HTML/CSS/JavaScript.
 - [Mustache](./skills/mustache/SKILL.md) - Use mustache.js (logic-less Mustache templates) for any templating task in JavaScript/Node.js environments.
 - [HTML DOM To Image](./skills/dom-to-image/SKILL.md) - Convert HTML DOM nodes to images (PNG/JPEG/SVG/Blob). Supports rendering options such as filter, backgroundColor, quality, and pixelRatio.
@@ -146,6 +147,7 @@ my-skill/
 - [TanStack Libraries](./skills/tanstack-libraries/SKILL.md) - Use when users ask about TanStack libraries, TanStack Start/Router/Query/Table/Form/Virtual/Store/DB/Pacer/Config/DevTools/CLI/Intent/Hotkeys/AI usage, package names, framework adapters, maturity status, documentation URLs, installation methods, core APIs, code examples.
 - [Claude Code Agent SDK](./skills/claude-code-agent-sdk/SKILL.md) - Claude Agent SDK documentation — build production AI agents with Claude Code as a library in Python or TypeScript. Use when building, configuring, or debugging agents with the Claude Agent SDK.
 - [Google MediaPipe](./skills/mediapipe/SKILL.md) - on-device ML pipeline framework for vision, text, audio, and LLM inference. Cross-platform deployment to Android, iOS, web, desktop, edge devices, and IoT. 
+- [Three.js 3D](./threejs-3d/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.  
 
 
 </details>
