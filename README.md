@@ -71,6 +71,8 @@ my-skill/
 - [WeChat Business Article Writer](./skills/wechat-business-article-writer/SKILL.md) - Create WeChat public account style business and technology articles with professional yet approachable tone. 
 - [Batch Content Factory](./skills/batch-content-factory/SKILL.md) - Multi-platform content production line. Automates the entire workflow from topic research to content creation. Suitable for self-media operators producing high-quality content in bulk, content team collaboration, and brand content matrix management.
 - [Anime Storyboard Prompt Generation](./skills/storyboard-prompt-generator/SKILL.md) - Parse anime storyboard scripts and generate four types of prompts: character prompts, scene prompts, Sora video generation prompts, and standard storyboard prompts.
+- [Contrast Poster Prompt Generator](./skills/contrast-poster-prompt/SKILL.md) - Match the most suitable type from 15 contrast gameplay styles (gender, age, identity, image, scene, object, role, consumption/economy, pre-post state, skill level, cognitive common sense, time-space dislocation, tone/attitude, item function, physique/appearance) based on user needs, generate high-quality English AI drawing prompts and Chinese poster copy.
+- [Bazi Qimen](./skills/bazi-qimen/SKILL.md) - Bazi (Four Pillars Astrology) and Qi Men Dun Jia chart calculation and interpretation skills. Provides data analysis and cognitive science based calculations and interpretations, serving as an auxiliary decision-making reference rooted in traditional Chinese metaphysics.
 
 </details>
 
