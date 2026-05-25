@@ -152,6 +152,8 @@ my-skill/
 - [Google MediaPipe](./skills/mediapipe/SKILL.md) - on-device ML pipeline framework for vision, text, audio, and LLM inference. Cross-platform deployment to Android, iOS, web, desktop, edge devices, and IoT. 
 - [Three.js 3D](./threejs-3d/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.
 - [AI Data Visualizer](./ai-data-visualizer/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.  
+- [WeChat Mini Program to uni-app](./wmp-to-uniapp/SKILL.md) - Convert native WeChat Mini Program projects into uni-app + Vue3 + TypeScript cross-platform projects. 
+- [NestJS Development Guide](./nestjs-dev-guide/SKILL.md) - NestJS Node.js server-side framework development guide.
 
 
 </details>
