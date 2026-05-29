@@ -56,8 +56,12 @@ my-skill/
 - [Deep Article Analysis](./skills/deep-article-analysis/SKILL.md) - Conduct in-depth analysis and interpretation of articles, extracting core viewpoints, key data, and deep insights.
 - [Windows WeChat MCP](./skills/windows-wechat-mcp/SKILL.md) - Windows WeChat message monitoring and sending. Achieved through window automation: screenshot, search contacts, send messages. Use when needing to send messages to WeChat contacts, check WeChat window status, or perform WeChat-related automation tasks.
 - [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision"
+- [Agent Skills](./skills/agent-skills/SKILL.md) - Agent Skills standard reference guide. Covers SKILL.md specification format, progressive disclosure mechanism, skill discovery and activation, frontmatter metadata fields, directory structure conventions. 
 - [Skill Distiller](./skills/skill-distiller/SKILL.md) - Skill Distiller. Triggered when users encounter repetitive problems, need to systematize a solution in a certain domain, or want to solidify someone's methodology into a reusable operational process.
 - [Personality Distiller](./skills/personality-distiller/SKILL.md) - Personality Distiller — Automatically distill from name/vague requirement/link/existing Skill/local corpus into complete Agent persona file pack via deep research to framework extraction, directly overwriting current workspace persona files.
+- [Multi-Dimensional Novel Evaluation System](./skills/novel-reviewer/SKILL.md) - Multi-dimensional novel evaluation based on provided content, assessing across plot, characters, writing quality, worldbuilding, pacing, originality, emotional resonance, dialogue quality, structure, and reader appeal, producing a total score. Use for book reviews, work evaluation, creative feedback, web novel assessment, and similar scenarios.
+- [Technical Documentation Translator](./skills/tech-translator/SKILL.md) - Professional internet technical documentation translator, proficient in internet industry terminology. Translates documents provided by users while fully preserving original formatting, and performs technical accuracy and format correctness verification. Suitable for technical docs, API docs, READMEs, technical blogs, specification documents, and other EN↔CN translation scenarios.
+- [Mind Map Creation Expert](./skills/mindmap-creation/SKILL.md) - Mind map creation expert that produces structured, hierarchical mind maps based on user-provided topics. Breaks down complex knowledge into logically clear tree structures.
 
 </details>
 
@@ -74,6 +78,7 @@ my-skill/
 - [Contrast Poster Prompt Generator](./skills/contrast-poster-prompt/SKILL.md) - Match the most suitable type from 15 contrast gameplay styles (gender, age, identity, image, scene, object, role, consumption/economy, pre-post state, skill level, cognitive common sense, time-space dislocation, tone/attitude, item function, physique/appearance) based on user needs, generate high-quality English AI drawing prompts and Chinese poster copy.
 - [Bazi Qimen](./skills/bazi-qimen/SKILL.md) - Bazi (Four Pillars Astrology) and Qi Men Dun Jia chart calculation and interpretation skills. Provides data analysis and cognitive science based calculations and interpretations, serving as an auxiliary decision-making reference rooted in traditional Chinese metaphysics.
 - [Professional Novel Writing Techniques](./skills/novel-writing-techniques/SKILL.md) - Covers six core writing techniques — dual narrative/mirroring, character biography method, foreshadowing (Cao Xueqin's "gray thread" technique), poetic language style, morally gray character development, and hardcore intellectual duel design. Helps writers enhance the depth, logic, and literary quality of their novels.
+- [Web Novel Writing Assistant](./skills/web-novel-writing-assistant/SKILL.md) - Web novel writing assistant, solving core pain points: context loss, inconsistent style, setting conflicts, pacing issues, multi-plot confusion, unstable quality, and inability to internalize reader feedback. 
 
 </details>
 
@@ -143,9 +148,10 @@ my-skill/
 - [Commander.js](./skills/commander/SKILL.md) - Commander.js is the most popular command-line interface (CLI) framework for Node.js.
 - [TanStack Libraries](./skills/tanstack-libraries/SKILL.md) - Use when users ask about TanStack libraries, TanStack Start/Router/Query/Table/Form/Virtual/Store/DB/Pacer/Config/DevTools/CLI/Intent/Hotkeys/AI usage, package names, framework adapters, maturity status, documentation URLs, installation methods, core APIs, code examples.
 - [Google MediaPipe](./skills/mediapipe/SKILL.md) - on-device ML pipeline framework for vision, text, audio, and LLM inference. Cross-platform deployment to Android, iOS, web, desktop, edge devices, and IoT. 
-- [Three.js 3D](./threejs-3d/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.
-- [NestJS Development Guide](./nestjs-dev-guide/SKILL.md) - NestJS Node.js server-side framework development guide.
-- [Fuse.js Fuzzy Search](./fusejs/SKILL.md) - Implement fuzzy search in JavaScript/TypeScript projects using Fuse.js. Use when users need client-side search, fuzzy matching, search highlighting, multi-field weighted search, tokenized search, or Web Worker parallel search.
+- [Three.js 3D](./skills/threejs-3d/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.
+- [NestJS Development Guide](./skills/nestjs-dev-guide/SKILL.md) - NestJS Node.js server-side framework development guide.
+- [Fuse.js Fuzzy Search](./skills/fusejs/SKILL.md) - Implement fuzzy search in JavaScript/TypeScript projects using Fuse.js. Use when users need client-side search, fuzzy matching, search highlighting, multi-field weighted search, tokenized search, or Web Worker parallel search.
+- [Markmap — Build mindmaps with plain text](./skills/markmap/SKILL.md) - markmap — Render Markdown as interactive SVG mindmaps. Use when users need to convert Markdown documents into mindmaps, generate HTML files via CLI, or navigate mindmap nodes interactively in the browser.
 - [Claude Code Agent SDK](./skills/claude-code-agent-sdk/SKILL.md) - Claude Agent SDK documentation — build production AI agents with Claude Code as a library in Python or TypeScript. Use when building, configuring, or debugging agents with the Claude Agent SDK.
 - [VS Code Copilot Custom Agent Creator](./skills/vscode-agents-creator/SKILL.md) - Create VS Code Copilot custom Agent (.agent.md) files.
 - [Fully Automated Collaborative Code Development Pipeline](./skills/auto-collaboration-dev-pipeline/SKILL.md) - Fully automated collaborative code development pipeline for complex code development tasks. Must be used when users request code development, program writing, feature implementation, or have code quality requirements.
@@ -154,7 +160,7 @@ my-skill/
 - [LEGO Pixel Art Generator](./skills/lego-pixel-art/SKILL.md) - Convert any image into LEGO brick pixel art, generating a complete building plan and material purchase list. Built-in standard LEGO color system, supports custom sizes (10-200 studs) and color precision adjustment, outputs a row-by-row building guide. Pure frontend implementation, zero dependencies, ready to use out of the box. Suitable for LEGO enthusiasts, craft creators, and educators.
 - [Clone Website](./skills/clone-website/SKILL.md) - Clone, copy, rebuild, or reverse engineer any website. Use when users request to clone a website, copy a page, replicate a webpage, or recreate one from scratch.
 - [Static Site Cloner](./skills/static-site-cloner/SKILL.md) - Static site reproduction expert - Analyze target websites and manually code their structure, visual style, and basic interactions using pure HTML/CSS/JavaScript.
-- [AI Data Visualizer](./ai-data-visualizer/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.  
-- [WeChat Mini Program to uni-app](./wmp-to-uniapp/SKILL.md) - Convert native WeChat Mini Program projects into uni-app + Vue3 + TypeScript cross-platform projects. 
+- [AI Data Visualizer](./skills/ai-data-visualizer/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.  
+- [WeChat Mini Program to uni-app](./skills/wmp-to-uniapp/SKILL.md) - Convert native WeChat Mini Program projects into uni-app + Vue3 + TypeScript cross-platform projects. 
 
 </details>
