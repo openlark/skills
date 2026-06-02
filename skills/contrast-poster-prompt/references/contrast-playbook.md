@@ -5,6 +5,7 @@ This document contains 15 types of contrast + advanced combination techniques fo
 ---
 
 ## 1. Gender Contrast
+
 - **Core Contrast**: Breaks stereotypes of male/female behavior, swapping gender roles.
 - **Poster Visual Contrast**:
   - Left: A serious man in a suit working at an office | Right: The same man in a ballet tutu performing graceful ballet.
@@ -12,6 +13,7 @@ This document contains 15 types of contrast + advanced combination techniques fo
 - **Poster Copy**: Gender ≠ Behavioral boundaries | Men can be graceful, women can be tough.
 
 ## 2. Age Contrast
+
 - **Core Contrast**: Subverts expected behavior patterns for different age groups.
 - **Poster Visual Contrast**:
   - Left: An adult feeding a 5-year-old child | Right: The 5-year-old standing on a stool teaching an adult to chop vegetables.

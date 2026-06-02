@@ -1,7 +1,8 @@
 ---
 name: vercel-cli
 description: Vercel CLI skill for deploying and managing Vercel projects from the terminal.
-metadata: {"openclaw":{"emoji":"▲"}}
+metadata: { "openclaw": { "emoji": "▲", "requires": { "bins": ["nodejs"], "env":["VERCEL_TOKEN"]},"primaryEnv":"VERCEL_TOKEN" } }
+
 ---
 
 # Vercel CLI
@@ -113,6 +114,4 @@ vercel mcp                      # MCP client configuration
 
 ## Reference Documentation
 
-- REST API: https://vercel.com/docs/rest-api
-- Create Token: https://vercel.com/account/tokens
 - See `references/commands.md` for detailed command parameter descriptions

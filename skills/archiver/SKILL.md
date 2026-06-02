@@ -47,6 +47,9 @@ archive.directory('src/', 'src');                                        // Dire
 archive.directory('dist/', false);                                       // Directory contents → archive root
 archive.glob('*.js', { cwd: __dirname });                                // Glob match
 
+// ⚠️ `archive.directory()` does NOT support ignore/filter patterns.
+//    To exclude node_modules, use glob() instead (see Excluding node_modules below).
+
 archive.finalize();
 ```
 
@@ -173,7 +176,62 @@ memoryStream.on('finish', () => {
 });
 ```
 
-### Pattern 4: Batch Packaging — Multiple Archives in Series
+### Pattern 4: Excluding node_modules When Packaging a Project
+
+> `archive.directory()` has **no built-in ignore** — it adds everything recursively.
+> To skip `node_modules`, use one of these approaches:
+
+**Option A — glob() with ignore (recommended):**
+
+```js
+const archive = archiver('zip', { zlib: { level: 9 } });
+archive.pipe(fs.createWriteStream('project.zip'));
+
+// glob picks up files but lets you set ignore patterns
+archive.glob('**/*', {
+  cwd: '/path/to/project',
+  ignore: ['node_modules/**', '.git/**', 'dist/**'],
+  dot: true,             // include dotfiles
+});
+
+archive.finalize();
+```
+
+**Option B — Manual directory walk (custom filtering):**
+
+```js
+const klaw = require('klaw');       // or fs.walk / @nodelib/fs.walk
+
+archive.glob('**/*', {
+  cwd: rootDir,
+  ignore: ['node_modules/**'],
+  dot: true,
+});
+archive.finalize();
+```
+
+> **Why not `archive.directory()`?** `directory()` is a one-shot bulk append with no filter callback. For any kind of exclusion, always switch to `glob()` — it's the same code walking underneath, just with pattern support.
+
+**Option C — Pre-build a file list:**
+
+```js
+const klaw = require('klaw');  // npm install klaw
+
+async function zipWithFilter(srcDir, outPath) {
+  const archive = archiver('zip', { zlib: { level: 9 } });
+  archive.pipe(fs.createWriteStream(outPath));
+
+  for await (const file of klaw(srcDir)) {
+    if (file.stats.isFile() && !file.path.includes('node_modules')) {
+      archive.file(file.path, { name: path.relative(srcDir, file.path) });
+    }
+  }
+
+  await archive.finalize();
+}
+```
+
+### Pattern 5: Batch Packaging — Multiple Archives in Series
 
 ```js
 async function createBatchedArchives(fileGroups, outputDir) {

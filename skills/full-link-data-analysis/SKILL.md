@@ -1,14 +1,14 @@
 ```markdown
 ---
 name: full-link-data-analysis
-description: Full-Link Data Analysis Engine: From business议题 to analytical report with complete seven-layer architecture. Built-in 15 analysis methods, supports data-aware routing (议题 semantics + data structure + problem type three dimensions), built-in quality assurance, outputs Feishu doc format analytical reports.
+description: Full-Link Data Analysis Engine: From business Agenda to analytical report with complete seven-layer architecture. Built-in 15 analysis methods, supports data-aware routing ( Agenda semantics + data structure + problem type three dimensions), built-in quality assurance, outputs Feishu doc format analytical reports.
 ---
 
 # Full-Link Data Analysis
 
 ## Overview
 
-The seven-layer architecture automatically transforms business议题 into structured analytical reports:
+The seven-layer architecture automatically transforms business Agenda into structured analytical reports:
 
 ```
 L1 Persona Understanding → L2 Data Scope Acquisition → L3 Analysis Data Scoping → L4 Problem Decomposition → L5 Method Selection → L6 Execution & Computation → L7 Result Output
@@ -22,12 +22,12 @@ The Agent writes Python analysis code as needed, no pre-packaged code library re
 - User wants to understand causes/trends/patterns in data
 - User needs a data analysis report
 - User mentions "analyze", "attribute", "predict", "cluster", "trend", "data report"
-- User presents business议题 requiring data-driven insights.
+- User presents business Agenda requiring data-driven insights.
 
 ## Core Principles
 
 - **Code on Demand**: Use `pandas`/`numpy`/`scipy`/`sklearn`/`statsmodels` to write analysis scripts tailored to the actual data.
-- **Data-Aware Routing**: Method selection综合考虑议题 semantics, data structure, and problem type.
+- **Data-Aware Routing**: Method selection综合考虑 Agenda semantics, data structure, and problem type.
 - **Quality Gate**: Every conclusion output must include confidence annotation and cross-validation description.
 
 ## Seven-Layer Process
@@ -58,7 +58,7 @@ Steps:
 
 ### L3 — Analysis Data Scoping
 
-Narrow down from "all available data" to "data relevant to the议题".
+Narrow down from "all available data" to "data relevant to the Agenda".
 
 Steps:
 1. Map business problem keywords to required data dimensions
@@ -87,7 +87,7 @@ Framework Selection:
 Select analysis method based on data-aware routing. See `references/routing.md`.
 
 Three-Dimensional Routing:
-1. **议题 Semantics**: Growth, churn, conversion, risk, attribution...
+1. ** Agenda Semantics**: Growth, churn, conversion, risk, attribution...
 2. **Data Structure**: Time series, cross-sectional, panel, hierarchical...
 3. **Problem Type**: Descriptive, diagnostic, predictive, prescriptive
 
