@@ -113,6 +113,8 @@ my-skill/
 - [Financial Report Tracker](./skills/financial-report-tracker/SKILL.md) - Automatically track tech company financial reports and generate investment summaries. Supports retrieving earnings calendars, market expectation comparisons, key metric interpretation, and more.
 - [Data Analysis Report Generator](./skills/data-analysis-report-generator/SKILL.md) - Intelligent data analysis report generator. Auto-identifies Excel/CSV data structure (dimensions, metrics, timelines), performs multi-dimensional parallel analysis, and generates professional HTML reports with ECharts interactive charts. 
 - [Full-Link Data Analysis](./skills/full-link-data-analysis/SKILL.md) - Full-Link Data Analysis Engine: From business Agenda to analytical report with complete seven-layer architecture. Built-in 15 analysis methods, supports data-aware routing (Agenda semantics + data structure + problem type three dimensions), built-in quality assurance, outputs Feishu doc format analytical reports.
+- [Business Model Canvas Analysis](./skills/business-model-canvas-analysis/SKILL.md) - Business Model Canvas analysis tool. Use when users need to analyze company business models, perform business model canvas modeling, deconstruct business logic, evaluate profit models, or write business analysis reports.
+- [Marketing Copywriting Master](./skills/marketing-copywriting-master/SKILL.md) - Professional marketing copywriter. Analyzes product features to extract core selling points, crafts compelling headlines and copy, and adapts content for multiple distribution channels. Use when users need to write product marketing copy, advertising copy, promotional content, or social media marketing copy.reports.
 
 </details>
 
