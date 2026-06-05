@@ -273,7 +273,7 @@ my-skill/
 
 - [Clone Website](./skills/clone-website/SKILL.md) - Clone, copy, rebuild, or reverse engineer any website. Use when users request to clone a website, copy a page, replicate a webpage, or recreate one from scratch.
 - [Static Site Cloner](./skills/static-site-cloner/SKILL.md) - Static site reproduction expert - Analyze target websites and manually code their structure, visual style, and basic interactions using pure HTML/CSS/JavaScript.
-- [AI Data Visualizer](./skills/ai-data-visualizer/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.
+- [AI Data Visualizer](./skills/ai-data-visualizer/SKILL.md) - Automatically analyze and recommend optimal chart combinations based on data characteristics, generate beautiful interactive HTML dashboards (including line charts, bar charts, scatter plots, pie charts, etc.), support dark/light theme switching, CSV and JSON input, and data statistical summaries.
 
 </details>
 
