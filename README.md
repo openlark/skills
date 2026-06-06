@@ -49,10 +49,11 @@ my-skill/
 <details open>
 <summary><h3 style="display:inline">Prompt Engineering</h3></summary>
 
+- [Lyra — Cognitive Architect](./skills/lyra-prompt-architect/SKILL.md) - Advanced prompt architect (Lyra v2) that builds precise, high-performance prompts from scratch through structured dialogue and advanced reasoning frameworks (CoT/ToT/GoT/AoT). Uses a four-phase architectural process: Dialogue → Blueprint → Synthesis → Refinement. Suitable for complex prompt engineering, task decomposition, and cognitive architecture design.
 - [AI Prompt Optimization](./skills/ai-prompt-optimization/SKILL.md) - Use when users need to optimize prompts for AI conversations, generate structured templates, create few-shot examples, design chain-of-thought guidance, or diagnose and improve existing prompts. Applicable to prompt optimization for various AI tools such as ChatGPT, Claude, Midjourney, etc.
 - [Prompt Optimizer Claude](./skills/prompt-optimizer-claude/SKILL.md) - Professional-grade Claude prompt optimization engine. Triggers when users submit raw prompts for optimization, refinement, or restructuring, or request "optimize prompt," "improve prompt effectiveness," "save tokens," or "improve output precision."
 - [AI Prompt Optimization Expert](./skills/ai-prompt-optimization-expert/SKILL.md) - Professional AI prompt optimization expert that analyzes and optimizes user prompts using the CRISP framework (Clarity/Role/Instructions/Structure/Precision). Diagnoses structural defects, vague expressions, and missing constraints. Outputs clear, precisely crafted optimized versions.
-- [Lyra — Cognitive Architect](./skills/lyra-prompt-architect/SKILL.md) - Advanced prompt architect (Lyra v2) that builds precise, high-performance prompts from scratch through structured dialogue and advanced reasoning frameworks (CoT/ToT/GoT/AoT). Uses a four-phase architectural process: Dialogue → Blueprint → Synthesis → Refinement. Suitable for complex prompt engineering, task decomposition, and cognitive architecture design.
+- [Game Design Expert](./skills/game-design-expert/SKILL.md) - A game design expert that comprehensively analyzes and designs HTML5 game proposals based on game name input. Outputs complete design documents covering core gameplay, special mechanics, visual design, interface elements, technical requirements, and detail optimizations. 
 
 </details>
 
@@ -166,6 +167,7 @@ my-skill/
 - [Data Analysis Report Generator](./skills/data-analysis-report-generator/SKILL.md) - Intelligent data analysis report generator. Auto-identifies Excel/CSV data structure (dimensions, metrics, timelines), performs multi-dimensional parallel analysis, and generates professional HTML reports with ECharts interactive charts.
 - [Full-Link Data Analysis](./skills/full-link-data-analysis/SKILL.md) - Full-Link Data Analysis Engine: From business Agenda to analytical report with complete seven-layer architecture. Built-in 15 analysis methods, supports data-aware routing (Agenda semantics + data structure + problem type three dimensions), built-in quality assurance, outputs Feishu doc format analytical reports.
 - [Intelligent Data Analysis Assistant](./skills/data-analyst-visualization/SKILL.md) - LLM-powered intelligent data analysis assistant supporting natural language queries, SQL generation, visualization, and multi-turn conversation. Suitable for business analysis, report automation, and data exploration. Supports MySQL, PostgreSQL, Snowflake, and Excel/JSON file reading.
+- [Data Visualization Designer](./skills/data-viz-designer/SKILL.md) - A data visualization designer that transforms complex data into clear, intuitive charts and visualizations. Covers data exploration and analysis, chart type selection, layout and style design, detail tuning, and interactive feature addition. 
 
 </details>
 
