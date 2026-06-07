@@ -140,6 +140,9 @@ my-skill/
 - [UI Scanner — Website Design System Extraction](./skills/ui-scanner/SKILL.md) - Given a website URL, crawl and analyze its visual design system — identify design style, color system, typography, component styles, and UI patterns. Outputs a structured design specification document for UI generation.
 - [Bazi Qimen](./skills/bazi-qimen/SKILL.md) - Bazi (Four Pillars Astrology) and Qi Men Dun Jia chart calculation and interpretation skills. Provides data analysis and cognitive science based calculations and interpretations, serving as an auxiliary decision-making reference rooted in traditional Chinese metaphysics.
 - [Tarot Card Reader](./skills/tarot-card-reader/SKILL.md) - Based on a complete tarot knowledge base and systematic interpretation guide, provides accurate readings for various classic spreads along with comprehensive advice, helping seekers engage in self-exploration, gain inspiration, and receive directional guidance through tarot cards.
+- [URL Extractor](./skills/url-extractor/SKILL.md) - Extract and validate URLs from text, presenting results in a clear format with brief descriptions and image previews. 
+- [Array URL Extractor](./skills/array-url-extractor/SKILL.md) - Extract valid downloadable URLs from Array[String] structures, clean and standardize them, then output directly. 
+- [Product Name Extractor](./skills/product-name-extractor/SKILL.md) - Precisely extract product names from user-provided text, ignoring all irrelevant information and outputting only the product names. 
 
 </details>
 
@@ -172,6 +175,7 @@ my-skill/
 - [Full-Link Data Analysis](./skills/full-link-data-analysis/SKILL.md) - Full-Link Data Analysis Engine: From business Agenda to analytical report with complete seven-layer architecture. Built-in 15 analysis methods, supports data-aware routing (Agenda semantics + data structure + problem type three dimensions), built-in quality assurance, outputs Feishu doc format analytical reports.
 - [Intelligent Data Analysis Assistant](./skills/data-analyst-visualization/SKILL.md) - LLM-powered intelligent data analysis assistant supporting natural language queries, SQL generation, visualization, and multi-turn conversation. Suitable for business analysis, report automation, and data exploration. Supports MySQL, PostgreSQL, Snowflake, and Excel/JSON file reading.
 - [Data Visualization Designer](./skills/data-viz-designer/SKILL.md) - A data visualization designer that transforms complex data into clear, intuitive charts and visualizations. Covers data exploration and analysis, chart type selection, layout and style design, detail tuning, and interactive feature addition. 
+- [Competitor Market Analyst](./skills/competitor-market-analyst/SKILL.md) - Professional competitor market analyst that performs price trend analysis and competitor product comparison based on product information, outputting analysis reports with data visualizations. 
 
 </details>
 
@@ -205,6 +209,7 @@ my-skill/
 - [Social Media Cover Image Generator](./skills/social-media-cover-generator/SKILL.md) - Social media cover image generator. Generates HTML pages based on title content and automatically converts them to PNG images, suitable for creating cover images and graphics for platforms such as Xiaohongshu, WeChat Official Accounts, Weibo, Douyin, Bilibili, Zhihu, Twitter/X, Instagram, and LinkedIn.
 - [LEGO Pixel Art Generator](./skills/lego-pixel-art/SKILL.md) - Convert any image into LEGO brick pixel art, generating a complete building plan and material purchase list. Built-in standard LEGO color system, supports custom sizes (10-200 studs) and color precision adjustment, outputs a row-by-row building guide. Pure frontend implementation, zero dependencies, ready to use out of the box. Suitable for LEGO enthusiasts, craft creators, and educators.
 - [Text-to-SVG — Natural Language to SVG Vector Graphic Code](./skills/text-to-svg/SKILL.md) - Generate logos, icons, illustrations and other vector graphics from natural language descriptions. Supports style directives (flat monochrome/gradient/stroke/rounded/minimal/tech). For design mockups, brand logos, UI icons, info illustrations.
+- [SVG.js](./skills/svgjs/SKILL.md) - SVG.js — lightweight SVG manipulation & animation library. Zero dependencies, chainable API, full SVG spec coverage. Create/position/animate shapes (rect/circle/ellipse/line/polyline/polygon/path), text, images, groups, gradients, masks, patterns, text paths.
 
 </details>
 
@@ -247,17 +252,22 @@ my-skill/
 - [ImapFlow](./skills/imapflow/SKILL.md) - Modern Node.js IMAP client library (imapflow) for email integration. Covers authentication, mailbox locking, streaming fetches, async iterators, reconnection strategies, proxy support, and provider-specific configs (Gmail, Outlook, Yahoo, etc.).
 - [Web Push Notifications](./skills/web-push/SKILL.md) - Send Web Push notifications from a Node.js backend using the web-push npm library (VAPID authentication, payload encryption). Covers generating VAPID keys, subscribing browsers, sending notifications, CLI usage, browser compatibility, and common pitfalls.
 - [Fuse.js Fuzzy Search](./skills/fusejs/SKILL.md) - Implement fuzzy search in JavaScript/TypeScript projects using Fuse.js. Use when users need client-side search, fuzzy matching, search highlighting, multi-field weighted search, tokenized search, or Web Worker parallel search.
+- [TanStack Libraries](./skills/tanstack-libraries/SKILL.md) - Use when users ask about TanStack libraries, TanStack Start/Router/Query/Table/Form/Virtual/Store/DB/Pacer/Config/DevTools/CLI/Intent/Hotkeys/AI usage, package names, framework adapters, maturity status, documentation URLs, installation methods, core APIs, code examples.
+- [NestJS Development Guide](./skills/nestjs-dev-guide/SKILL.md) - NestJS Node.js server-side framework development guide.
+- [@shopify/draggable — Drag & Drop Interaction Skill](./skills/shopify-draggable/SKILL.md) - Implement drag-and-drop interactions with @shopify/draggable. Supports Draggable (basic drag), Sortable (reordering), Droppable (drop zones), Swappable (swapping), Plugins (mirror/snapping/collision/scroll, etc.), Sensors (mouse/touch/force touch).
+- [SQLite Client](./skills/sqlite-client/SKILL.md) - SQLite database operations. Use this skill when users need to create, read, query, or modify SQLite databases (.db files).
 
 </details>
 
 <details open>
 <summary><h3 style="display:inline">CLI & Terminal Tools</h3></summary>
 
-- [ZX](./skills/zx/SKILL.md) - Comprehensive guide for writing shell scripts with Google zx — a tool for writing better scripts using JavaScript/TypeScript. Use when writing, debugging, or refactoring zx scripts (.mjs, .js, .ts files using zx), executing shell commands from JavaScript, working with ProcessPromise/ProcessOutput APIs, piping streams, configuring zx options, or using zx CLI. Do NOT use for general Node.js questions unrelated to shell scripting.
+- [Commander.js](./skills/commander/SKILL.md) - Commander.js is the most popular command-line interface (CLI) framework for Node.js.
 - [@clack/prompts](./skills/clack-prompts/SKILL.md) - Build beautiful interactive Node.js command-line apps with @clack/prompts. Use when building CLI apps, wizards, setup scripts, or any interactive terminal prompt flow in Node.js. Covers text input, password, confirm, select, autocomplete, multiselect, spinner, progress bars, grouped prompts, task runners, and styled logging.
 - [ink](./skills/ink-tui/SKILL.md) - Ink — React for interactive command-line apps. Build rich terminal UIs with React components.
-- [Commander.js](./skills/commander/SKILL.md) - Commander.js is the most popular command-line interface (CLI) framework for Node.js.
+- [Pi TUI](./skills/pi-tui/SKILL.md) - Pi TUI — Terminal UI framework with differential rendering + synchronized output for flicker-free interactive CLIs. 
 - [OpenTUI — Native Terminal UI Framework](./skills/opentui/SKILL.md) - OpenTUI — Zig-native terminal UI framework. Covers installation, renderer, components (Text/Box/Input/Select/Code/ScrollBox), Constructs declarative API, Flexbox layout, React/Solid bindings.
+- [ZX](./skills/zx/SKILL.md) - Comprehensive guide for writing shell scripts with Google zx — a tool for writing better scripts using JavaScript/TypeScript. Use when writing, debugging, or refactoring zx scripts (.mjs, .js, .ts files using zx), executing shell commands from JavaScript, working with ProcessPromise/ProcessOutput APIs, piping streams, configuring zx options, or using zx CLI. Do NOT use for general Node.js questions unrelated to shell scripting.
 - [Vercel CLI](./skills/vercel-cli/SKILL.md) - Vercel CLI skill for deploying and managing Vercel projects from the terminal.
 
 </details>
@@ -267,10 +277,6 @@ my-skill/
 
 - [Google Web Fonts](./skills/google-web-fonts/SKILL.md) - Use the Google Fonts API to add fonts to web pages.
 - [VitePress Static Website Generator](./skills/vitepress-generator/SKILL.md) - Quickly generate static websites using VitePress. Supports installing dependencies, initializing projects, local preview, building, and deployment.
-- [TanStack Libraries](./skills/tanstack-libraries/SKILL.md) - Use when users ask about TanStack libraries, TanStack Start/Router/Query/Table/Form/Virtual/Store/DB/Pacer/Config/DevTools/CLI/Intent/Hotkeys/AI usage, package names, framework adapters, maturity status, documentation URLs, installation methods, core APIs, code examples.
-- [NestJS Development Guide](./skills/nestjs-dev-guide/SKILL.md) - NestJS Node.js server-side framework development guide.
-- [@shopify/draggable — Drag & Drop Interaction Skill](./skills/shopify-draggable/SKILL.md) - Implement drag-and-drop interactions with @shopify/draggable. Supports Draggable (basic drag), Sortable (reordering), Droppable (drop zones), Swappable (swapping), Plugins (mirror/snapping/collision/scroll, etc.), Sensors (mouse/touch/force touch).
-- [SQLite Client](./skills/sqlite-client/SKILL.md) - SQLite database operations. Use this skill when users need to create, read, query, or modify SQLite databases (.db files).
 
 </details>
 
@@ -301,6 +307,8 @@ my-skill/
 <summary><h3 style="display:inline">Code Development Pipeline</h3></summary>
 
 - [Fully Automated Collaborative Code Development Pipeline](./skills/auto-collaboration-dev-pipeline/SKILL.md) - Fully automated collaborative code development pipeline for complex code development tasks. Must be used when users request code development, program writing, feature implementation, or have code quality requirements.
+- [Code Quality & Security Checks](./skills/code-check/SKILL.md) - Run project quality checks and security reviews, fixing all errors by priority until all pass.
+- [Code Analysis](./skills/code-analysis/SKILL.md) - Perform multi-dimensional advanced code analysis including knowledge graph generation, code quality evaluation, performance analysis, security review, architecture review, and test coverage analysis, outputting structured reports with actionable recommendations.
 
 </details>
 
@@ -310,5 +318,16 @@ my-skill/
 - [WeChat Mini Program to uni-app](./skills/wmp-to-uniapp/SKILL.md) - Convert native WeChat Mini Program projects into uni-app + Vue3 + TypeScript cross-platform projects.
 - [WeChat Mini Program CI](./skills/miniprogram-ci/SKILL.md) - A compilation module extracted from WeChat DevTools for uploading/previewing mini program/mini game code, building npm, deploying cloud functions, and managing cloud containers. Enables CI/CD without opening DevTools. For automated publishing, CI/CD pipelines, pre-release preview.
 - [WeChat Mini Program Automation SDK](./skills/miniprogram-automator/SKILL.md) - Automate UI operations and data validation of mini programs at runtime. Supports page navigation, element selection and interaction, data injection, screenshots, event listening. For E2E testing, UI automation, regression testing.
+
+</details>
+
+<details open>
+<summary><h3 style="display:inline">Shop</h3></summary>
+
+- [Model Prompt Generator](./skills/model-prompt-generator/SKILL.md) - Generate English model prompts for AI image generation tools based on user-provided Chinese clothing descriptions, covering model appearance, outfit coordination, scene lighting, and photography style.
+- [Model Replacement Prompt Generator](./skills/model-replacement-prompt-generator/SKILL.md) - Generate model replacement prompts based on user-uploaded model images, replacing the character and scene while preserving clothing and shoes. 
+- [Model Skin Swap Prompt Generator](./skills/model-skin-swap-prompt-generator/SKILL.md) - Generate skin swap prompts for model images, producing precise AI skin replacement instructions based on user-specified target skin tone/region while preserving original clothing, lighting, background, hairstyle, and composition. 
+- [Product Prompt Generator](./skills/product-prompt-generator/SKILL.md) -Generate high-quality product image prompts for AI image generation tools based on user-provided product information. 
+- [Product Pose Prompt Generator](./skills/product-pose-prompt-generator/SKILL.md) - Generate English image prompts for front-view product-holding character images based on user-provided text descriptions and image assets. 
 
 </details>
