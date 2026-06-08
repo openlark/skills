@@ -1,9 +1,9 @@
 ---
-name: codegraph
+name: codegraph-tool
 description: CodeGraph — Pre-indexed code knowledge graph tool. Provides semantic code intelligence for Claude Code, Cursor, Codex, Gemini, OpenCode, Hermes, Antigravity, Kiro and other AI agents. 
 ---
 
-# CodeGraph
+# CodeGraph Tool
 
 Local-first code intelligence tool. tree-sitter parsing → SQLite (FTS5) storage → MCP exposes knowledge graph. 
 

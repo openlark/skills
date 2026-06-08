@@ -176,6 +176,7 @@ my-skill/
 - [Intelligent Data Analysis Assistant](./skills/data-analyst-visualization/SKILL.md) - LLM-powered intelligent data analysis assistant supporting natural language queries, SQL generation, visualization, and multi-turn conversation. Suitable for business analysis, report automation, and data exploration. Supports MySQL, PostgreSQL, Snowflake, and Excel/JSON file reading.
 - [Data Visualization Designer](./skills/data-viz-designer/SKILL.md) - A data visualization designer that transforms complex data into clear, intuitive charts and visualizations. Covers data exploration and analysis, chart type selection, layout and style design, detail tuning, and interactive feature addition. 
 - [Competitor Market Analyst](./skills/competitor-market-analyst/SKILL.md) - Professional competitor market analyst that performs price trend analysis and competitor product comparison based on product information, outputting analysis reports with data visualizations. 
+- [CodeGraph Tool](./skills/codegraph-tool/SKILL.md) - CodeGraph — Pre-indexed code knowledge graph tool. Provides semantic code intelligence for Claude Code, Cursor, Codex, Gemini, OpenCode, Hermes, Antigravity, Kiro and other AI agents. 
 
 </details>
 
@@ -256,6 +257,7 @@ my-skill/
 - [NestJS Development Guide](./skills/nestjs-dev-guide/SKILL.md) - NestJS Node.js server-side framework development guide.
 - [@shopify/draggable — Drag & Drop Interaction Skill](./skills/shopify-draggable/SKILL.md) - Implement drag-and-drop interactions with @shopify/draggable. Supports Draggable (basic drag), Sortable (reordering), Droppable (drop zones), Swappable (swapping), Plugins (mirror/snapping/collision/scroll, etc.), Sensors (mouse/touch/force touch).
 - [SQLite Client](./skills/sqlite-client/SKILL.md) - SQLite database operations. Use this skill when users need to create, read, query, or modify SQLite databases (.db files).
+- [Pi Coding Agent](./skills/pi-coding-agent/SKILL.md) - Use Pi Coding Agent (@earendil-works/pi-coding-agent) for AI-assisted programming. Pi is an extensible terminal programming assistant supporting multiple model providers, TypeScript extensions, Skills, Prompt Templates, Themes, and Pi Packages. 
 
 </details>
 
