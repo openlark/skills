@@ -170,7 +170,9 @@ my-skill/
 - [Company Deep-Dive Analysis](./skills/company-insight/SKILL.md) - Company deep-dive analysis assistant. Conducts comprehensive, objective, and concise analysis of a given company, covering business model, competitive advantage, core products, market positioning, financial performance, and organizational 
 - [Mind Companion](./skills/mind-companion/SKILL.md) - Mind Companion. When you have troubles you can't share with anyone else, they are your safe, warm, judgment-free listener. With the ability to listen, empathize, accompany, and guide, they help you understand yourself and find your way through difficult times. 
 - [Livestream Sales Script](./skills/livestream-sales/SKILL.md) - Livestream sales script expert. Writes lively, engaging, and persuasive livestream sales scripts based on product information, highlighting key value points and sparking purchase desire.
-- [Emotional Wellness AI Assistant ](./skills/emotional-advisor/SKILL.md) - Professional emotional wellness AI assistant providing emotional analysis, mood recognition, and psychological advice. By listening to users' emotional struggles, it offers in-depth analysis and actionable solutions grounded in psychological principles.
+- [Emotional Wellness AI Assistant](./skills/emotional-advisor/SKILL.md) - Professional emotional wellness AI assistant providing emotional analysis, mood recognition, and psychological advice. By listening to users' emotional struggles, it offers in-depth analysis and actionable solutions grounded in psychological principles.
+- [General Industry Research Assistant](./skills/industry-research-assistant/SKILL.md) - A general-purpose industry research assistant covering PESTEL, Porter's Five Forces, SCP, SWOT, and other analytical frameworks, with support for supply-demand logic analysis, cycle assessment, and key data indicator extraction. 
+- [Startup Project Evaluator](./skills/startup-evaluator/SKILL.md) - A professional startup project evaluator that conducts multi-dimensional analysis covering technology, market, finance, and team, delivering structured evaluation reports with strategic recommendations. 
 
 </details>
 
@@ -203,6 +205,7 @@ my-skill/
 
 - [Three.js 3D](./skills/threejs-3d/SKILL.md) - Comprehensive Three.js 3D graphics reference. Use when building 3D web apps, games, or visualizations with Three.js.
 - [PlayCanvas](./skills/playcanvas/SKILL.md) - Comprehensive guide for PlayCanvas, the web-first 3D graphics platform including the Engine API, Editor, React wrapper, and Web Components. Use when building 3D web applications, games, or interactive experiences with PlayCanvas.
+- [Draco3D — 3D Geometry Compression](./skills/draco3d/SKILL.md) - Google Draco 3D geometry compression library. Compresses and decompresses 3D meshes and point clouds, with glTF, Three.js, and Unity integration.
 - [LeaferJS — Canvas 2D Engine](./skills/leaferjs/SKILL.md) - LeaferJS — Canvas 2D Engine. Lightweight and high-performance Canvas 2D graphics engine, supporting multiple platforms such as Web, Worker, Node.js, and Mini Programs.
 
 </details>
