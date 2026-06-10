@@ -95,6 +95,7 @@ my-skill/
 - [Idea Validator](./skills/idea-validator/SKILL.md) - Startup idea validation skill. Helps indie developers validate product ideas, analyze competitive landscapes, and assess market saturation.
 - [Image to Excel](./skills/image-to-excel/SKILL.md) - Extract table content from images, retrieve row/column data, correct recognition errors, and generate a well-formatted Excel file. 
 - [Data to Word Analysis Report](./skills/data-to-word-report/SKILL.md) - Automatically generate a professional Word analysis report from user-provided data files, including data overview, key metric statistics and trend analysis, key findings and conclusions. saturation.
+- [Smart Nutrition Customizer](./skills/smart-nutrition/SKILL.md) - Smart Nutrition Customizer. Input height, weight, age, gender, and activity level to calculate BMR and macronutrient needs, then generate a full-day meal plan with recipes, calorie counts, and nutrition labels. 
 
 </details>
 
@@ -108,6 +109,8 @@ my-skill/
 - [Technical Documentation Translator](./skills/tech-translator/SKILL.md) - Professional technical documentation translation expert, proficient in internet industry terminology. Translates user-provided files, preserves original formatting, and performs professional accuracy and format validation.
 - [Mind Map Creation Expert](./skills/mindmap-creation/SKILL.md) - Mind map creation expert that produces structured, hierarchical mind maps based on user-provided topics. Breaks down complex knowledge into logically clear tree structures.
 - [AI Note Assistant](./skills/note-ai-assistant/SKILL.md) - Advanced AI-powered note assistant built into a note editor. Understands the three-layer context structure (Document/Block/Selection), distinguishes between "instruction mode" (silently replace selected text) and "question mode" (provide answers). Preserves custom MDX tags and seamlessly integrates with note content. Suitable for smart note apps, knowledge management tools, and AI writing assistants.
+- [PM Brainstorming](./skills/pm-brainstorm/SKILL.md) - Product manager brainstorming assistant. Based on user needs, applies multiple creative thinking methods to output no fewer than 5 differentiated, actionable innovative product ideas.knowledge management tools, and AI writing assistants.
+- [Stand-Up Comedy Script Writer](./skills/standup-script/SKILL.md) - Stand-up comedy script writing assistant. Creates concise, humorous, and performance-ready stand-up comedy scripts based on user-provided creative ideas and material, including character dialogue, joke structuring, and stage directions. 
 
 </details>
 
@@ -164,6 +167,10 @@ my-skill/
 - [Marketing Copywriting Master](./skills/marketing-copywriting-master/SKILL.md) - Professional marketing copywriter. Analyzes product features to extract core selling points, crafts compelling headlines and copy, and adapts content for multiple distribution channels. Use when users need to write product marketing copy, advertising copy, promotional content, or social media marketing copy.
 - [Planning Document Writing Assistant](./skills/write-planning-document/SKILL.md) - Compose a complete planning document based on a given topic, including core elements such as planning objectives, detailed plans, resource budgets, performance evaluation, and risk response. Use when the user needs to write a strategic plan, event plan, project proposal, or planning document.
 - [Promotion Strategy Writing Assistant](./skills/write-promotion-strategy/SKILL.md) - Write a comprehensive promotion strategy based on provided product information, including product selling point extraction, multi-channel promotion planning, goal setting, and expected outcome evaluation. Use when the user needs to write a product promotion strategy, develop a marketing plan, or plan promotion channels.
+- [Company Deep-Dive Analysis](./skills/company-insight/SKILL.md) - Company deep-dive analysis assistant. Conducts comprehensive, objective, and concise analysis of a given company, covering business model, competitive advantage, core products, market positioning, financial performance, and organizational 
+- [Mind Companion](./skills/mind-companion/SKILL.md) - Mind Companion. When you have troubles you can't share with anyone else, they are your safe, warm, judgment-free listener. With the ability to listen, empathize, accompany, and guide, they help you understand yourself and find your way through difficult times. 
+- [Livestream Sales Script](./skills/livestream-sales/SKILL.md) - Livestream sales script expert. Writes lively, engaging, and persuasive livestream sales scripts based on product information, highlighting key value points and sparking purchase desire.
+- [Emotional Wellness AI Assistant ](./skills/emotional-advisor/SKILL.md) - Professional emotional wellness AI assistant providing emotional analysis, mood recognition, and psychological advice. By listening to users' emotional struggles, it offers in-depth analysis and actionable solutions grounded in psychological principles.
 
 </details>
 
