@@ -111,6 +111,7 @@ my-skill/
 - [AI Note Assistant](./skills/note-ai-assistant/SKILL.md) - Advanced AI-powered note assistant built into a note editor. Understands the three-layer context structure (Document/Block/Selection), distinguishes between "instruction mode" (silently replace selected text) and "question mode" (provide answers). Preserves custom MDX tags and seamlessly integrates with note content. Suitable for smart note apps, knowledge management tools, and AI writing assistants.
 - [PM Brainstorming](./skills/pm-brainstorm/SKILL.md) - Product manager brainstorming assistant. Based on user needs, applies multiple creative thinking methods to output no fewer than 5 differentiated, actionable innovative product ideas.knowledge management tools, and AI writing assistants.
 - [Stand-Up Comedy Script Writer](./skills/standup-script/SKILL.md) - Stand-up comedy script writing assistant. Creates concise, humorous, and performance-ready stand-up comedy scripts based on user-provided creative ideas and material, including character dialogue, joke structuring, and stage directions. 
+- [Feynman Cognition — Cognitive Atom Deconstruction Framework](./skills/feynman-cognition/SKILL.md) - Cognitive Atom Deconstruction Framework: Feynman. A five-step deconstruction framework — plain-language explanation → consensus mapping → controversy surfacing → cross-disciplinary mapping → heuristic questioning. First make it clear, then provide the framework, then introduce controversies, then connect across domains, and finally find blind spots. 
 
 </details>
 
@@ -173,6 +174,8 @@ my-skill/
 - [Emotional Wellness AI Assistant](./skills/emotional-advisor/SKILL.md) - Professional emotional wellness AI assistant providing emotional analysis, mood recognition, and psychological advice. By listening to users' emotional struggles, it offers in-depth analysis and actionable solutions grounded in psychological principles.
 - [General Industry Research Assistant](./skills/industry-research-assistant/SKILL.md) - A general-purpose industry research assistant covering PESTEL, Porter's Five Forces, SCP, SWOT, and other analytical frameworks, with support for supply-demand logic analysis, cycle assessment, and key data indicator extraction. 
 - [Startup Project Evaluator](./skills/startup-evaluator/SKILL.md) - A professional startup project evaluator that conducts multi-dimensional analysis covering technology, market, finance, and team, delivering structured evaluation reports with strategic recommendations. 
+- [Musk Mindset — Mental Operating System](./skills/musk-mindset/SKILL.md) - Musk's mental operating system. Based on deep research from biographies, podcasts, tweets, court testimonies, decision records, and external critiques, distilling 5 core mental models, 8 decision heuristics, and a complete expression DNA.
+- [Business Plan Writing](./skills/business-plan-writer/SKILL.md) - A professional business plan writing assistant. Generates complete business plans covering nine modules: project introduction, market analysis, industry analysis, marketing strategy, operations plan, financial planning, team introduction, financing needs and exit mechanisms, and risk assessment, designed to attract investors and partners. 
 
 </details>
 
@@ -197,6 +200,7 @@ my-skill/
 - [D3.js — A JavaScript library for data visualization](./skills/d3js/SKILL.md) - D3.js (Data-Driven Documents) — A JavaScript library for data visualization. Covers installation, selections, data binding, scales, shapes, transitions, 30+ module reference, chart templates, React/Svelte integration. For custom SVG/Canvas visualizations.
 - [Mermaid Diagram Generation](./skills/mermaid-chart/SKILL.md) - Generate various diagrams using Mermaid syntax (flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, pie charts, ER diagrams, mind maps, timelines, C4 architecture diagrams, user journey maps, Git graphs, Sankey diagrams, quadrant charts, etc.). Supports inline rendering in Markdown.
 - [Markmap — Build mindmaps with plain text](./skills/markmap/SKILL.md) - markmap — Render Markdown as interactive SVG mindmaps. Use when users need to convert Markdown documents into mindmaps, generate HTML files via CLI, or navigate mindmap nodes interactively in the browser.
+- [AI Data Visualizer](./skills/ai-data-visualizer/SKILL.md) - Automatically analyze and recommend optimal chart combinations based on data characteristics, generate beautiful interactive HTML dashboards (including line charts, bar charts, scatter plots, pie charts, etc.), support dark/light theme switching, CSV and JSON input, and data statistical summaries.
 
 </details>
 
@@ -247,7 +251,7 @@ my-skill/
 </details>
 
 <details open>
-<summary><h3 style="display:inline">Node.js Libraries & Utilities</h3></summary>
+<summary><h3 style="display:inline">Libraries & Utilities</h3></summary>
 
 - [Gray Matter](./skills/gray-matter/SKILL.md) - Parse YAML/JSON/TOML front-matter from strings or files using the gray-matter library.
 - [minimatch](./skills/minimatch/SKILL.md) - Use minimatch (glob pattern matching library) for file path matching, such as *.js, **/*.ts and other glob patterns. Note: Do NOT use user input as pattern source to prevent ReDoS attacks.
@@ -297,7 +301,6 @@ my-skill/
 
 - [Clone Website](./skills/clone-website/SKILL.md) - Clone, copy, rebuild, or reverse engineer any website. Use when users request to clone a website, copy a page, replicate a webpage, or recreate one from scratch.
 - [Static Site Cloner](./skills/static-site-cloner/SKILL.md) - Static site reproduction expert - Analyze target websites and manually code their structure, visual style, and basic interactions using pure HTML/CSS/JavaScript.
-- [AI Data Visualizer](./skills/ai-data-visualizer/SKILL.md) - Automatically analyze and recommend optimal chart combinations based on data characteristics, generate beautiful interactive HTML dashboards (including line charts, bar charts, scatter plots, pie charts, etc.), support dark/light theme switching, CSV and JSON input, and data statistical summaries.
 
 </details>
 
