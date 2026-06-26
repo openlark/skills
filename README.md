@@ -79,7 +79,7 @@ my-skill/
 <details open>
 <summary><h3 style="display:inline">Skill Development</h3></summary>
 
-- [Agent Skills](./skills/agent-skills/SKILL.md) - Agent Skills standard reference guide. Covers SKILL.md specification format, progressive disclosure mechanism, skill discovery and activation, frontmatter metadata fields, directory structure conventions.
+- [Agent Skills](./skills/agent-skills/SKILL.md) - Agent Skills standard reference guide. Covers SKILL.md specification format, progressive loading, skill discovery and activation, authoring best practices, quality evaluation, description optimization, and more. 
 - [Skill Distiller](./skills/skill-distiller/SKILL.md) - Skill Distiller. Triggered when users encounter repetitive problems, need to systematize a solution in a certain domain, or want to solidify someone's methodology into a reusable operational process.
 - [Personality Distiller](./skills/personality-distiller/SKILL.md) - Personality Distiller — Automatically distill from name/vague requirement/link/existing Skill/local corpus into complete Agent persona file pack via deep research to framework extraction, directly overwriting current workspace persona files.
 
