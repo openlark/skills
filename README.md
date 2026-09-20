@@ -82,6 +82,7 @@ my-skill/
 - [Agent Skills](./skills/agent-skills/SKILL.md) - Agent Skills standard reference guide. Covers SKILL.md specification format, progressive loading, skill discovery and activation, authoring best practices, quality evaluation, description optimization, and more. 
 - [Skill Distiller](./skills/skill-distiller/SKILL.md) - Skill Distiller. Triggered when users encounter repetitive problems, need to systematize a solution in a certain domain, or want to solidify someone's methodology into a reusable operational process.
 - [Personality Distiller](./skills/personality-distiller/SKILL.md) - Personality Distiller — Automatically distill from name/vague requirement/link/existing Skill/local corpus into complete Agent persona file pack via deep research to framework extraction, directly overwriting current workspace persona files.
+- [Porting OpenClaw Skills Across Platforms](./skills/skill-port/SKILL.md) - Ports/adapts OpenClaw skills to other agent platforms (Claude Code, Codex, Cursor, Hermes, opencode, generic Agent Skills). 
 
 </details>
 
@@ -282,6 +283,7 @@ my-skill/
 - [@shopify/draggable — Drag & Drop Interaction Skill](./skills/shopify-draggable/SKILL.md) - Implement drag-and-drop interactions with @shopify/draggable. Supports Draggable (basic drag), Sortable (reordering), Droppable (drop zones), Swappable (swapping), Plugins (mirror/snapping/collision/scroll, etc.), Sensors (mouse/touch/force touch).
 - [SQLite Client](./skills/sqlite-client/SKILL.md) - SQLite database operations. Use this skill when users need to create, read, query, or modify SQLite databases (.db files).
 - [Pi Coding Agent](./skills/pi-coding-agent/SKILL.md) - Use Pi Coding Agent (@earendil-works/pi-coding-agent) for AI-assisted programming. Pi is an extensible terminal programming assistant supporting multiple model providers, TypeScript extensions, Skills, Prompt Templates, Themes, and Pi Packages. 
+- [face-api.js](./skills/face-api/SKILL.md) - Build face detection, face landmark detection, face recognition, face expression (emotion) recognition, and age/gender estimation with the face-api.js library (browser or Node.js). 
 
 </details>
 
